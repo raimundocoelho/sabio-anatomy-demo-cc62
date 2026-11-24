@@ -2,11 +2,11 @@
  "esquema": "sabio-anatomy/manifesto",
  "versaoEsquema": "1.1.0",
  "modelo": {
-  "id": "face-real",
+  "id": "face-mulher",
   "nome": {
-   "pt-BR": "Rosto escaneado em camadas (demonstração)"
+   "pt-BR": "Rosto feminino escaneado em camadas (demonstração)"
   },
-  "versao": "0.3.0",
+  "versao": "0.4.0",
   "modulo": "face",
   "validacao": "pendente",
   "aviso": "Demonstração. Pele de escaneamento real ajustada ao modelo, sem validação anatômica ou clínica. Não é o modelo do produto.",
@@ -59,7 +59,6 @@
    "face.musculo.platisma.e",
    "face.osso.vertebra-c3",
    "face.osso.vertebra-c4",
-   "face.pele.ombros",
    "face.pele.pescoco"
   ]
  },
@@ -71,16 +70,7 @@
    },
    "sistema": "tegumentar",
    "ordem": 1,
-   "materialPadrao": "pele-real"
-  },
-  {
-   "id": "pelos",
-   "nome": {
-    "pt-BR": "Sobrancelhas e cílios"
-   },
-   "sistema": "tegumentar",
-   "ordem": 2,
-   "materialPadrao": "pelo"
+   "materialPadrao": "pele-mulher"
   },
   {
    "id": "musculos-expressao",
@@ -283,20 +273,6 @@
    "dupla": true,
    "amostra": "#d9b84a"
   },
-  "pelo": {
-   "cor": "#3a2a20",
-   "rugosidade": 0.55,
-   "metalico": 0,
-   "especular": 0.3,
-   "dupla": true,
-   "amostra": "#2a1d15"
-  },
-  "cilio": {
-   "cor": "#15100c",
-   "rugosidade": 0.5,
-   "metalico": 0,
-   "dupla": true
-  },
   "dente": {
    "cor": "#ffffff",
    "coresDeVertice": true,
@@ -376,22 +352,20 @@
    "dupla": true,
    "amostra": "#c9d2cf"
   },
-  "pele-real": {
+  "pele-mulher": {
    "cor": "#ffffff",
    "rugosidade": 1,
    "metalico": 0,
-   "especular": 0.34,
-   "verniz": 0.04,
-   "vernizRugosidade": 0.38,
+   "especular": 0.3,
+   "verniz": 0.03,
+   "vernizRugosidade": 0.4,
    "dupla": true,
-   "espalhamento": 0.8,
+   "espalhamento": 0.6,
    "texturas": {
-    "cor": "real-cor",
-    "relevo": "real-relevo",
-    "rugosidade": "real-rugosidade"
+    "cor": "mulher-cor",
+    "rugosidade": "mulher-rugosidade"
    },
-   "relevoEscala": 0.0008,
-   "amostra": "#c9967c"
+   "amostra": "#c99a7e"
   }
  },
  "origens": {
@@ -406,11 +380,11 @@
    "url": "ferramentas/textura_pele.py",
    "autores": "Sábio Anatomy Engine"
   },
-  "infinite": {
-   "nome": "Infinite, 3D Head Scan",
-   "url": "https://casual-effects.com/g3d/data10/research/model/lpshead/lpshead.zip",
-   "sha256": "cc683bb006de4c1770ffbf0ec6da64c02df0173398001013b3782814b6d619ca",
-   "autores": "Lee Perry-Smith / Infinite-Realities"
+  "head3": {
+   "nome": "HEAD 3 scan",
+   "url": "https://sketchfab.com/3d-models/head-3-scan-1b14ce0f5a73497386bc1c2417451792",
+   "sha256": "8e6840cc601520becdcc50d775df02de4bf58e262f20d30adc3570c7da3ed813",
+   "autores": "Nikitos & 3130 (vrcityphoto, Sketchfab)"
   }
  },
  "licencas": {
@@ -433,12 +407,12 @@
    "aprovadoPor": "Responsável pelo projeto (24/11/2026)",
    "observacoes": "A licença do BodyParts3D é contraditória entre site (CC BY 4.0) e arquivos (CC BY-SA 2.1 JP): tratada como BY-SA. Peças NC do Z-Anatomy (orelha interna, rim) não foram usadas."
   },
-  "pele-escaneada": {
-   "nome": "CC BY-SA 4.0 (base CC BY 3.0: Infinite)",
-   "url": "https://creativecommons.org/licenses/by/3.0/",
+  "pele-mulher": {
+   "nome": "CC BY-SA 4.0 (base CC BY 4.0: HEAD 3 scan)",
+   "url": "https://creativecommons.org/licenses/by/4.0/",
    "dataConsulta": "2026-11-24",
-   "credito": "Infinite, 3D Head Scan by Lee Perry-Smith, CC BY 3.0 (www.triplegangers.com, www.ir-ltd.net). Distribuição de Morgan McGuire e Guedis Cardenas.",
-   "alteracoes": "Posicionado por marcos e deslocado para cobrir as estruturas do Z-Anatomy; cortado no busto; subdividido; relevo aplicado; três riscos da foto retocados; dividido em regiões; rugosidade, sobrancelhas e cílios gerados por script.",
+   "credito": "\"HEAD 3 scan\" (https://sketchfab.com/3d-models/head-3-scan-1b14ce0f5a73497386bc1c2417451792), de Nikitos & 3130 (https://sketchfab.com/vrcityphoto), licença CC BY 4.0. Modificado.",
+   "alteracoes": "Ruído da captura suavizado; forma do rosto calculada pela média com o próprio espelho; orelha e lateral esquerdas substituídas pelo espelho das direitas (estavam danificadas); queixo, nuca e topo fechados por superfície calculada, com cor da vizinhança; textura transferida para nova malha e clareada; posicionado por marcos e deslocado para cobrir as estruturas do Z-Anatomy; cortado no busto; dividido em regiões; rugosidade gerada por script.",
    "usoComercial": true,
    "adaptacao": true,
    "web": true,
@@ -450,25 +424,17 @@
    "restricaoTecnica": "proibida",
    "escopoNestaEtapa": "Demonstração provisória, publicada por decisão do responsável em 24/11/2026.",
    "aprovadoPor": "Responsável pelo projeto (24/11/2026)",
-   "observacoes": "Pessoa real e identificável: a licença cobre o arquivo, não necessariamente o uso comercial da imagem dela (perguntar ao advogado). O ajuste usou medidas do Z-Anatomy: por precaução, tratada como BY-SA."
+   "observacoes": "CC BY é a declaração de quem publicou no Sketchfab; não há prova de autorização da pessoa retratada, que é real e identificável. O ajuste usou medidas do Z-Anatomy: por precaução, tratada como BY-SA."
   }
  },
  "pacotes": [
   {
    "id": "pele",
    "arquivo": "pele.glb",
-   "bytes": 3477044,
-   "sha256": "3789d1f3060011ec3da5263b9ad79e5955aacea430e324ac5aa0170199f297de",
-   "licenca": "pele-escaneada",
-   "origem": "infinite"
-  },
-  {
-   "id": "pelos",
-   "arquivo": "pelos.glb",
-   "bytes": 178388,
-   "sha256": "2f0ff2f510c7ee3ba57e329a9da4500fa9950ee5ed8de2bef77ef4121cb6b4ea",
-   "licenca": "pele-escaneada",
-   "origem": "procedural"
+   "bytes": 1962920,
+   "sha256": "0a006618889d52ee7234b84c3abdea243c8b1b08f1fc6f80e1d390631cb00f86",
+   "licenca": "pele-mulher",
+   "origem": "head3"
   },
   {
    "id": "musculos-expressao",
@@ -6846,14 +6812,14 @@
    "lateralidade": "direito",
    "malha": {
     "pacote": "pele",
-    "no": "pele:bucal:real:d"
+    "no": "pele:bucal:mulher:d"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 4450,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 4936,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -6874,14 +6840,14 @@
    "lateralidade": "esquerdo",
    "malha": {
     "pacote": "pele",
-    "no": "pele:bucal:real:e"
+    "no": "pele:bucal:mulher:e"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 5265,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 4622,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -6893,7 +6859,7 @@
   {
    "id": "face.pele.couro",
    "nome": {
-    "pt-BR": "Couro cabeludo"
+    "pt-BR": "Couro cabeludo e cabelo"
    },
    "sinonimos": [
     "pele"
@@ -6902,14 +6868,14 @@
    "lateralidade": "mediano",
    "malha": {
     "pacote": "pele",
-    "no": "pele:couro:real:m"
+    "no": "pele:couro:mulher:m"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 14114,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 63215,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -6930,14 +6896,14 @@
    "lateralidade": "mediano",
    "malha": {
     "pacote": "pele",
-    "no": "pele:frontal:real:m"
+    "no": "pele:frontal:mulher:m"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 8217,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 13581,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -6958,14 +6924,14 @@
    "lateralidade": "direito",
    "malha": {
     "pacote": "pele",
-    "no": "pele:infraorbital:real:d"
+    "no": "pele:infraorbital:mulher:d"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 1356,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 1006,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -6986,14 +6952,14 @@
    "lateralidade": "esquerdo",
    "malha": {
     "pacote": "pele",
-    "no": "pele:infraorbital:real:e"
+    "no": "pele:infraorbital:mulher:e"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 1568,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 1013,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7014,14 +6980,14 @@
    "lateralidade": "mediano",
    "malha": {
     "pacote": "pele",
-    "no": "pele:mentual:real:m"
+    "no": "pele:mentual:mulher:m"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 2891,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 2463,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7042,42 +7008,14 @@
    "lateralidade": "mediano",
    "malha": {
     "pacote": "pele",
-    "no": "pele:nasal:real:m"
+    "no": "pele:nasal:mulher:m"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 21149,
-   "validacao": {
-    "geometria": "pendente",
-    "posicao": "pendente",
-    "nome": "pendente",
-    "revisor": null,
-    "data": null
-   }
-  },
-  {
-   "id": "face.pele.ombros",
-   "nome": {
-    "pt-BR": "Pele dos ombros"
-   },
-   "sinonimos": [
-    "pele"
-   ],
-   "categoria": "pele",
-   "lateralidade": "mediano",
-   "malha": {
-    "pacote": "pele",
-    "no": "pele:ombros:real:m"
-   },
-   "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 14651,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 3890,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7098,14 +7036,14 @@
    "lateralidade": "mediano",
    "malha": {
     "pacote": "pele",
-    "no": "pele:oral:real:m"
+    "no": "pele:oral:mulher:m"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 29201,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 4629,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7117,7 +7055,7 @@
   {
    "id": "face.pele.orbital.d",
    "nome": {
-    "pt-BR": "Pele da região orbital e pálpebras"
+    "pt-BR": "Pele da região orbital, pálpebras e olho aparente"
    },
    "sinonimos": [
     "pele"
@@ -7126,14 +7064,14 @@
    "lateralidade": "direito",
    "malha": {
     "pacote": "pele",
-    "no": "pele:orbital:real:d"
+    "no": "pele:orbital:mulher:d"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 28539,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 2365,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7145,7 +7083,7 @@
   {
    "id": "face.pele.orbital.e",
    "nome": {
-    "pt-BR": "Pele da região orbital e pálpebras"
+    "pt-BR": "Pele da região orbital, pálpebras e olho aparente"
    },
    "sinonimos": [
     "pele"
@@ -7154,14 +7092,14 @@
    "lateralidade": "esquerdo",
    "malha": {
     "pacote": "pele",
-    "no": "pele:orbital:real:e"
+    "no": "pele:orbital:mulher:e"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 28697,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 2445,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7182,14 +7120,14 @@
    "lateralidade": "direito",
    "malha": {
     "pacote": "pele",
-    "no": "pele:orelha:real:d"
+    "no": "pele:orelha:mulher:d"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 20681,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 1652,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7210,14 +7148,14 @@
    "lateralidade": "esquerdo",
    "malha": {
     "pacote": "pele",
-    "no": "pele:orelha:real:e"
+    "no": "pele:orelha:mulher:e"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 30042,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 1461,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7238,14 +7176,14 @@
    "lateralidade": "direito",
    "malha": {
     "pacote": "pele",
-    "no": "pele:parotideomasseterica:real:d"
+    "no": "pele:parotideomasseterica:mulher:d"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 1428,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 2711,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7266,14 +7204,14 @@
    "lateralidade": "esquerdo",
    "malha": {
     "pacote": "pele",
-    "no": "pele:parotideomasseterica:real:e"
+    "no": "pele:parotideomasseterica:mulher:e"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 2892,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 2606,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7294,14 +7232,14 @@
    "lateralidade": "mediano",
    "malha": {
     "pacote": "pele",
-    "no": "pele:pescoco:real:m"
+    "no": "pele:pescoco:mulher:m"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 26485,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 24692,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7322,14 +7260,14 @@
    "lateralidade": "direito",
    "malha": {
     "pacote": "pele",
-    "no": "pele:temporal:real:d"
+    "no": "pele:temporal:mulher:d"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 19722,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 1954,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7350,14 +7288,14 @@
    "lateralidade": "esquerdo",
    "malha": {
     "pacote": "pele",
-    "no": "pele:temporal:real:e"
+    "no": "pele:temporal:mulher:e"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 10839,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 1626,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7378,14 +7316,14 @@
    "lateralidade": "direito",
    "malha": {
     "pacote": "pele",
-    "no": "pele:zigomatica:real:d"
+    "no": "pele:zigomatica:mulher:d"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 901,
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 1898,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7406,122 +7344,14 @@
    "lateralidade": "esquerdo",
    "malha": {
     "pacote": "pele",
-    "no": "pele:zigomatica:real:e"
+    "no": "pele:zigomatica:mulher:e"
    },
    "transformacao": null,
-   "material": "pele-real",
-   "origem": "infinite",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "triangulos": 916,
-   "validacao": {
-    "geometria": "pendente",
-    "posicao": "pendente",
-    "nome": "pendente",
-    "revisor": null,
-    "data": null
-   }
-  },
-  {
-   "id": "face.pelos.cilios.d",
-   "nome": {
-    "pt-BR": "Cílios"
-   },
-   "sinonimos": [
-    "pelos"
-   ],
-   "categoria": "pelos",
-   "lateralidade": "direito",
-   "malha": {
-    "pacote": "pelos",
-    "no": "pelos:cilios:d"
-   },
-   "transformacao": null,
-   "material": "cilio",
-   "origem": "procedural",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "validacao": {
-    "geometria": "pendente",
-    "posicao": "pendente",
-    "nome": "pendente",
-    "revisor": null,
-    "data": null
-   }
-  },
-  {
-   "id": "face.pelos.cilios.e",
-   "nome": {
-    "pt-BR": "Cílios"
-   },
-   "sinonimos": [
-    "pelos"
-   ],
-   "categoria": "pelos",
-   "lateralidade": "esquerdo",
-   "malha": {
-    "pacote": "pelos",
-    "no": "pelos:cilios:e"
-   },
-   "transformacao": null,
-   "material": "cilio",
-   "origem": "procedural",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "validacao": {
-    "geometria": "pendente",
-    "posicao": "pendente",
-    "nome": "pendente",
-    "revisor": null,
-    "data": null
-   }
-  },
-  {
-   "id": "face.pelos.sobrancelha.d",
-   "nome": {
-    "pt-BR": "Sobrancelha"
-   },
-   "sinonimos": [
-    "pelos"
-   ],
-   "categoria": "pelos",
-   "lateralidade": "direito",
-   "malha": {
-    "pacote": "pelos",
-    "no": "pelos:sobrancelha:d"
-   },
-   "transformacao": null,
-   "material": "pelo",
-   "origem": "procedural",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
-   "validacao": {
-    "geometria": "pendente",
-    "posicao": "pendente",
-    "nome": "pendente",
-    "revisor": null,
-    "data": null
-   }
-  },
-  {
-   "id": "face.pelos.sobrancelha.e",
-   "nome": {
-    "pt-BR": "Sobrancelha"
-   },
-   "sinonimos": [
-    "pelos"
-   ],
-   "categoria": "pelos",
-   "lateralidade": "esquerdo",
-   "malha": {
-    "pacote": "pelos",
-    "no": "pelos:sobrancelha:e"
-   },
-   "transformacao": null,
-   "material": "pelo",
-   "origem": "procedural",
-   "licenca": "pele-escaneada",
-   "versao": "0.3.0",
+   "material": "pele-mulher",
+   "origem": "head3",
+   "licenca": "pele-mulher",
+   "versao": "0.4.0",
+   "triangulos": 1726,
    "validacao": {
     "geometria": "pendente",
     "posicao": "pendente",
@@ -7909,25 +7739,18 @@
   ]
  },
  "texturas": {
-  "real-cor": {
-   "arquivo": "pele-real-cor.jpg",
-   "bytes": 2281597,
-   "sha256": "fde6b5697ee4dfee170fdd059dd48c721a8331b9b595d5b317f2295487a49d1c",
-   "licenca": "pele-escaneada",
-   "origem": "infinite"
+  "mulher-cor": {
+   "arquivo": "pele-mulher-cor.jpg",
+   "bytes": 2421261,
+   "sha256": "82dc192430ba2f1595569ab8aba384b83c5484c77892e5188fd468dc6bb70af6",
+   "licenca": "pele-mulher",
+   "origem": "head3"
   },
-  "real-relevo": {
-   "arquivo": "pele-real-relevo.jpg",
-   "bytes": 2472316,
-   "sha256": "12fe079bdcb868f9ac761f729dc567c490b573924cc80e7bcfa1a1d75d7b03be",
-   "licenca": "pele-escaneada",
-   "origem": "infinite"
-  },
-  "real-rugosidade": {
-   "arquivo": "pele-real-rugosidade.jpg",
-   "bytes": 381597,
-   "sha256": "1b49ebab966ab2a8c7fd16374318fd659bafc968db9a0d5e4bd151c33b65e9f4",
-   "licenca": "pele-escaneada",
+  "mulher-rugosidade": {
+   "arquivo": "pele-mulher-rugosidade.jpg",
+   "bytes": 121945,
+   "sha256": "597dfb5b13824225b5d47733c7a451cd2bbc058a9ea918b04f297b5401f502ec",
+   "licenca": "pele-mulher",
    "origem": "procedural"
   }
  }
