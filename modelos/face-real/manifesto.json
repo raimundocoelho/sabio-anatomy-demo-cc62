@@ -1,0 +1,7934 @@
+{
+ "esquema": "sabio-anatomy/manifesto",
+ "versaoEsquema": "1.1.0",
+ "modelo": {
+  "id": "face-real",
+  "nome": {
+   "pt-BR": "Rosto escaneado em camadas (demonstração)"
+  },
+  "versao": "0.3.0",
+  "modulo": "face",
+  "validacao": "pendente",
+  "aviso": "Demonstração. Pele de escaneamento real ajustada ao modelo, sem validação anatômica ou clínica. Não é o modelo do produto.",
+  "ausencias": [
+   "Tecido subcutâneo",
+   "Compartimentos de gordura superficial e profunda",
+   "SMAS",
+   "Ligamentos de retenção",
+   "Ramos individualizados do nervo facial",
+   "Terceiros molares",
+   "Cartilagem da orelha",
+   "Musculatura completa do pescoço"
+  ]
+ },
+ "espaco": {
+  "unidade": "m",
+  "eixoCima": "+Y",
+  "eixoFrente": "+Z",
+  "ladoDireitoDoPaciente": "-X",
+  "transformacao": {
+   "posicao": [
+    0,
+    0,
+    0
+   ],
+   "rotacao": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "escala": [
+    1,
+    1,
+    1
+   ]
+  },
+  "origemDescricao": "Centro aproximado da cabeça. Translação única aplicada a todas as estruturas na exportação."
+ },
+ "enquadramento": {
+  "excluirDoPadrao": [
+   "face.cartilagem.tireoidea",
+   "face.musculo.esplenio-cabeca.d",
+   "face.musculo.esplenio-cabeca.e",
+   "face.musculo.esternocleidomastoideo.d",
+   "face.musculo.esternocleidomastoideo.e",
+   "face.musculo.estilo-hioideo.d",
+   "face.musculo.estilo-hioideo.e",
+   "face.musculo.platisma.d",
+   "face.musculo.platisma.e",
+   "face.osso.vertebra-c3",
+   "face.osso.vertebra-c4",
+   "face.pele.ombros",
+   "face.pele.pescoco"
+  ]
+ },
+ "categorias": [
+  {
+   "id": "pele",
+   "nome": {
+    "pt-BR": "Pele (por região)"
+   },
+   "sistema": "tegumentar",
+   "ordem": 1,
+   "materialPadrao": "pele-real"
+  },
+  {
+   "id": "pelos",
+   "nome": {
+    "pt-BR": "Sobrancelhas e cílios"
+   },
+   "sistema": "tegumentar",
+   "ordem": 2,
+   "materialPadrao": "pelo"
+  },
+  {
+   "id": "musculos-expressao",
+   "nome": {
+    "pt-BR": "Músculos da expressão facial"
+   },
+   "sistema": "muscular",
+   "ordem": 3,
+   "materialPadrao": "musculo"
+  },
+  {
+   "id": "musculos-mastigacao",
+   "nome": {
+    "pt-BR": "Músculos da mastigação"
+   },
+   "sistema": "muscular",
+   "ordem": 4,
+   "materialPadrao": "musculo"
+  },
+  {
+   "id": "arterias",
+   "nome": {
+    "pt-BR": "Artérias"
+   },
+   "sistema": "vascular",
+   "ordem": 5,
+   "materialPadrao": "arteria"
+  },
+  {
+   "id": "veias",
+   "nome": {
+    "pt-BR": "Veias"
+   },
+   "sistema": "vascular",
+   "ordem": 6,
+   "materialPadrao": "veia"
+  },
+  {
+   "id": "nervos",
+   "nome": {
+    "pt-BR": "Nervos"
+   },
+   "sistema": "nervoso",
+   "ordem": 7,
+   "materialPadrao": "nervo"
+  },
+  {
+   "id": "glandulas",
+   "nome": {
+    "pt-BR": "Glândulas e ductos"
+   },
+   "sistema": "glandular",
+   "ordem": 8,
+   "materialPadrao": "glandula"
+  },
+  {
+   "id": "fascias",
+   "nome": {
+    "pt-BR": "Fáscias e aponeurose"
+   },
+   "sistema": "fascial",
+   "ordem": 9,
+   "materialPadrao": "fascia"
+  },
+  {
+   "id": "dentes",
+   "nome": {
+    "pt-BR": "Dentes"
+   },
+   "sistema": "dental",
+   "ordem": 10,
+   "materialPadrao": "dente"
+  },
+  {
+   "id": "boca",
+   "nome": {
+    "pt-BR": "Gengiva e língua"
+   },
+   "sistema": "digestorio",
+   "ordem": 11,
+   "materialPadrao": "mucosa"
+  },
+  {
+   "id": "olhos",
+   "nome": {
+    "pt-BR": "Olhos"
+   },
+   "sistema": "visual",
+   "ordem": 12,
+   "materialPadrao": "olho"
+  },
+  {
+   "id": "musculos-olho",
+   "nome": {
+    "pt-BR": "Músculos do olho"
+   },
+   "sistema": "muscular",
+   "ordem": 13,
+   "materialPadrao": "musculo"
+  },
+  {
+   "id": "cartilagens",
+   "nome": {
+    "pt-BR": "Cartilagens"
+   },
+   "sistema": "esqueletico",
+   "ordem": 14,
+   "materialPadrao": "cartilagem"
+  },
+  {
+   "id": "musculos-pescoco",
+   "nome": {
+    "pt-BR": "Músculos do pescoço"
+   },
+   "sistema": "muscular",
+   "ordem": 15,
+   "materialPadrao": "musculo"
+  },
+  {
+   "id": "ossos",
+   "nome": {
+    "pt-BR": "Ossos"
+   },
+   "sistema": "osseo",
+   "ordem": 16,
+   "materialPadrao": "osso"
+  }
+ ],
+ "materiais": {
+  "osso": {
+   "cor": "#ffffff",
+   "coresDeVertice": true,
+   "rugosidade": 0.62,
+   "metalico": 0,
+   "especular": 0.35,
+   "verniz": 0.06,
+   "vernizRugosidade": 0.55,
+   "dupla": true,
+   "amostra": "#d9cbb0"
+  },
+  "musculo": {
+   "cor": "#ffffff",
+   "coresDeVertice": true,
+   "rugosidade": 0.5,
+   "metalico": 0,
+   "especular": 0.5,
+   "verniz": 0.22,
+   "vernizRugosidade": 0.42,
+   "dupla": true,
+   "amostra": "#8f3a32"
+  },
+  "fascia": {
+   "cor": "#cfc4b4",
+   "rugosidade": 0.45,
+   "metalico": 0,
+   "especular": 0.5,
+   "verniz": 0.2,
+   "vernizRugosidade": 0.4,
+   "dupla": true,
+   "opacidade": 0.45,
+   "amostra": "#cfc4b4"
+  },
+  "glandula": {
+   "cor": "#c9a06a",
+   "rugosidade": 0.55,
+   "metalico": 0,
+   "especular": 0.45,
+   "verniz": 0.15,
+   "vernizRugosidade": 0.5,
+   "dupla": true,
+   "amostra": "#c9a06a"
+  },
+  "arteria": {
+   "cor": "#a31d1f",
+   "rugosidade": 0.38,
+   "metalico": 0,
+   "especular": 0.5,
+   "verniz": 0.3,
+   "vernizRugosidade": 0.3,
+   "dupla": true,
+   "amostra": "#a31d1f"
+  },
+  "veia": {
+   "cor": "#34528f",
+   "rugosidade": 0.4,
+   "metalico": 0,
+   "especular": 0.5,
+   "verniz": 0.3,
+   "vernizRugosidade": 0.3,
+   "dupla": true,
+   "amostra": "#34528f"
+  },
+  "nervo": {
+   "cor": "#d9b84a",
+   "rugosidade": 0.5,
+   "metalico": 0,
+   "especular": 0.4,
+   "verniz": 0.15,
+   "vernizRugosidade": 0.4,
+   "dupla": true,
+   "amostra": "#d9b84a"
+  },
+  "pelo": {
+   "cor": "#3a2a20",
+   "rugosidade": 0.55,
+   "metalico": 0,
+   "especular": 0.3,
+   "dupla": true,
+   "amostra": "#2a1d15"
+  },
+  "cilio": {
+   "cor": "#15100c",
+   "rugosidade": 0.5,
+   "metalico": 0,
+   "dupla": true
+  },
+  "dente": {
+   "cor": "#ffffff",
+   "coresDeVertice": true,
+   "rugosidade": 0.22,
+   "metalico": 0,
+   "especular": 0.55,
+   "verniz": 0.6,
+   "vernizRugosidade": 0.12,
+   "espalhamento": 0.25,
+   "dupla": true,
+   "amostra": "#e6dcc6"
+  },
+  "mucosa": {
+   "cor": "#ffffff",
+   "coresDeVertice": true,
+   "rugosidade": 0.34,
+   "metalico": 0,
+   "especular": 0.5,
+   "verniz": 0.5,
+   "vernizRugosidade": 0.25,
+   "espalhamento": 0.5,
+   "dupla": true,
+   "amostra": "#b5625c"
+  },
+  "olho": {
+   "cor": "#e9e3dc",
+   "rugosidade": 0.28,
+   "metalico": 0,
+   "especular": 0.5,
+   "verniz": 0.8,
+   "vernizRugosidade": 0.08,
+   "espalhamento": 0.3,
+   "dupla": true,
+   "amostra": "#e9e3dc"
+  },
+  "iris": {
+   "cor": "#ffffff",
+   "coresDeVertice": true,
+   "rugosidade": 0.45,
+   "metalico": 0,
+   "dupla": true,
+   "amostra": "#5a3d26"
+  },
+  "retina": {
+   "cor": "#160c08",
+   "rugosidade": 0.9,
+   "metalico": 0,
+   "dupla": true,
+   "amostra": "#3a1c14"
+  },
+  "lente": {
+   "cor": "#0c0806",
+   "rugosidade": 0.15,
+   "metalico": 0,
+   "dupla": true,
+   "opacidade": 0.9
+  },
+  "cornea": {
+   "cor": "#ffffff",
+   "rugosidade": 0.12,
+   "metalico": 0,
+   "especular": 1,
+   "verniz": 1,
+   "vernizRugosidade": 0.14,
+   "opacidade": 0.1,
+   "dupla": false,
+   "amostra": "#dfe9ee"
+  },
+  "cartilagem": {
+   "cor": "#c3cfce",
+   "rugosidade": 0.4,
+   "metalico": 0,
+   "especular": 0.5,
+   "verniz": 0.3,
+   "vernizRugosidade": 0.3,
+   "espalhamento": 0.35,
+   "dupla": true,
+   "amostra": "#c9d2cf"
+  },
+  "pele-real": {
+   "cor": "#ffffff",
+   "rugosidade": 1,
+   "metalico": 0,
+   "especular": 0.34,
+   "verniz": 0.04,
+   "vernizRugosidade": 0.38,
+   "dupla": true,
+   "espalhamento": 0.8,
+   "texturas": {
+    "cor": "real-cor",
+    "relevo": "real-relevo",
+    "rugosidade": "real-rugosidade"
+   },
+   "relevoEscala": 0.0008,
+   "amostra": "#c9967c"
+  }
+ },
+ "origens": {
+  "z-anatomy": {
+   "nome": "Z-Anatomy (Startup.blend)",
+   "url": "https://github.com/Z-Anatomy/Models-of-human-anatomy",
+   "sha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+   "autores": "Gauthier Kervyn e colaboradores do Z-Anatomy; derivado de BodyParts3D (Kousaku Okubo, DBCLS)"
+  },
+  "procedural": {
+   "nome": "Gerado por script deste projeto",
+   "url": "ferramentas/textura_pele.py",
+   "autores": "Sábio Anatomy Engine"
+  },
+  "infinite": {
+   "nome": "Infinite, 3D Head Scan",
+   "url": "https://casual-effects.com/g3d/data10/research/model/lpshead/lpshead.zip",
+   "sha256": "cc683bb006de4c1770ffbf0ec6da64c02df0173398001013b3782814b6d619ca",
+   "autores": "Lee Perry-Smith / Infinite-Realities"
+  }
+ },
+ "licencas": {
+  "cc-by-sa-4.0-zanatomy": {
+   "nome": "CC BY-SA 4.0",
+   "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+   "dataConsulta": "2026-11-23",
+   "credito": "Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0; BodyParts3D - The Database Center for Life Science - CC BY-SA 2.1 Japan; Cranial Nerves and Foramina - University of Dundee, CAHID - CC BY 4.0.",
+   "alteracoes": "Recorte de 124 estruturas; curvas convertidas em malha com as pontas tampadas; translação única; solda de vértices; orientação de faces e normais recalculadas; cor por tecido; compressão meshopt sem quantização.",
+   "usoComercial": true,
+   "adaptacao": true,
+   "web": true,
+   "api": true,
+   "sdk": true,
+   "redistribuicao": "mesma-licenca",
+   "naoComercial": false,
+   "semDerivados": false,
+   "restricaoTecnica": "proibida",
+   "escopoNestaEtapa": "Demonstração provisória, publicada por decisão do responsável em 24/11/2026.",
+   "aprovadoPor": "Responsável pelo projeto (24/11/2026)",
+   "observacoes": "A licença do BodyParts3D é contraditória entre site (CC BY 4.0) e arquivos (CC BY-SA 2.1 JP): tratada como BY-SA. Peças NC do Z-Anatomy (orelha interna, rim) não foram usadas."
+  },
+  "pele-escaneada": {
+   "nome": "CC BY-SA 4.0 (base CC BY 3.0: Infinite)",
+   "url": "https://creativecommons.org/licenses/by/3.0/",
+   "dataConsulta": "2026-11-24",
+   "credito": "Infinite, 3D Head Scan by Lee Perry-Smith, CC BY 3.0 (www.triplegangers.com, www.ir-ltd.net). Distribuição de Morgan McGuire e Guedis Cardenas.",
+   "alteracoes": "Posicionado por marcos e deslocado para cobrir as estruturas do Z-Anatomy; cortado no busto; subdividido; relevo aplicado; três riscos da foto retocados; dividido em regiões; rugosidade, sobrancelhas e cílios gerados por script.",
+   "usoComercial": true,
+   "adaptacao": true,
+   "web": true,
+   "api": true,
+   "sdk": true,
+   "redistribuicao": "mesma-licenca",
+   "naoComercial": false,
+   "semDerivados": false,
+   "restricaoTecnica": "proibida",
+   "escopoNestaEtapa": "Demonstração provisória, publicada por decisão do responsável em 24/11/2026.",
+   "aprovadoPor": "Responsável pelo projeto (24/11/2026)",
+   "observacoes": "Pessoa real e identificável: a licença cobre o arquivo, não necessariamente o uso comercial da imagem dela (perguntar ao advogado). O ajuste usou medidas do Z-Anatomy: por precaução, tratada como BY-SA."
+  }
+ },
+ "pacotes": [
+  {
+   "id": "pele",
+   "arquivo": "pele.glb",
+   "bytes": 3477044,
+   "sha256": "3789d1f3060011ec3da5263b9ad79e5955aacea430e324ac5aa0170199f297de",
+   "licenca": "pele-escaneada",
+   "origem": "infinite"
+  },
+  {
+   "id": "pelos",
+   "arquivo": "pelos.glb",
+   "bytes": 178388,
+   "sha256": "2f0ff2f510c7ee3ba57e329a9da4500fa9950ee5ed8de2bef77ef4121cb6b4ea",
+   "licenca": "pele-escaneada",
+   "origem": "procedural"
+  },
+  {
+   "id": "musculos-expressao",
+   "arquivo": "musculo_expressao.glb",
+   "bytes": 906168,
+   "sha256": "e93046ad45d79f6a7bf13c79590fe70eec88ca52e9d915a42f049db001859280",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "musculos-mastigacao",
+   "arquivo": "musculo_mastigacao.glb",
+   "bytes": 340720,
+   "sha256": "c8153c52ccf4347ab1091b70465a783ca2d990c5acf871782e0df1be94f980f9",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "arterias",
+   "arquivo": "arteria.glb",
+   "bytes": 1340248,
+   "sha256": "45ec72d05765cce8034b11d707d13bc04c7a9cdd986931e871f4de773a714f20",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "veias",
+   "arquivo": "veia.glb",
+   "bytes": 402336,
+   "sha256": "aebba34acd888686d29ace98867ca73c563517ce3b61db26961a2ef44f26d79f",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "nervos",
+   "arquivo": "nervo.glb",
+   "bytes": 1317228,
+   "sha256": "da48247c2223a58389c7dbd2dc6d6153532b0a5f8ecd4206171fbe3f02118b4a",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "glandulas",
+   "arquivo": "glandula.glb",
+   "bytes": 119152,
+   "sha256": "fdcbdc0d4fab5727a9f9b13808b745267cdce5e2006d919d6f80aad792bbd4ce",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "fascias",
+   "arquivo": "fascia.glb",
+   "bytes": 485656,
+   "sha256": "e57f9d9cd43a34a3e71451a626ad54570187612a69e6fcef3b5648eb40b72b37",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "dentes",
+   "arquivo": "dente.glb",
+   "bytes": 512248,
+   "sha256": "a06545e8b97e809b0a08a6ac83a7435a065af00a2f261298e8e8687b10520888",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "boca",
+   "arquivo": "boca.glb",
+   "bytes": 261612,
+   "sha256": "605a6cc38e90cb9961f5ad9305b209a5fcca31086322b16299742b8a345c0759",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "olhos",
+   "arquivo": "olho.glb",
+   "bytes": 399920,
+   "sha256": "07ba413616afd95cac54904920ad69d5963ee4afc39f057c9e0047b3e9750b12",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "musculos-olho",
+   "arquivo": "musculo_olho.glb",
+   "bytes": 241988,
+   "sha256": "99f029deb081651fcb916c25ac0ea61af96768c3645a8dac0b5b82944e191a9a",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "cartilagens",
+   "arquivo": "cartilagem.glb",
+   "bytes": 71592,
+   "sha256": "c5d2c612e6a6a3df15274df5f4b09f25f5f2fa9fff80c4496e3a75187c6f07d0",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "musculos-pescoco",
+   "arquivo": "musculo_pescoco.glb",
+   "bytes": 251380,
+   "sha256": "7655a704b4fdfcae332653f11fa87817a0f6cfc099d6a68dcb479f7b13ea1a54",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  },
+  {
+   "id": "ossos",
+   "arquivo": "osso.glb",
+   "bytes": 1443024,
+   "sha256": "0368b134e6453b314719b902f34e3143a21c739db98fb8a1f4ba913dfa261da8",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "origem": "z-anatomy"
+  }
+ ],
+ "estruturas": [
+  {
+   "id": "face.arteria.angular.d",
+   "nome": {
+    "pt-BR": "Artéria angular",
+    "en": "Angular artery",
+    "la": "Arteria angularis"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Angular artery.r"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4397"
+   },
+   "triangulos": 11948,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.angular.e",
+   "nome": {
+    "pt-BR": "Artéria angular",
+    "en": "Angular artery",
+    "la": "Arteria angularis"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Angular artery.l"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4397"
+   },
+   "triangulos": 11948,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.facial.d",
+   "nome": {
+    "pt-BR": "Artéria facial",
+    "en": "Facial artery",
+    "la": "Arteria facialis"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Facial artery.r"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4388"
+   },
+   "triangulos": 2612,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.facial.e",
+   "nome": {
+    "pt-BR": "Artéria facial",
+    "en": "Facial artery",
+    "la": "Arteria facialis"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Facial artery.l"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4388"
+   },
+   "triangulos": 2612,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.infraorbital.d",
+   "nome": {
+    "pt-BR": "Artéria infraorbital",
+    "en": "Infra-orbital artery",
+    "la": "Arteria infraorbitalis"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Infra-orbital artery.r"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4447"
+   },
+   "triangulos": 1172,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.infraorbital.e",
+   "nome": {
+    "pt-BR": "Artéria infraorbital",
+    "en": "Infra-orbital artery",
+    "la": "Arteria infraorbitalis"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Infra-orbital artery.l"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4447"
+   },
+   "triangulos": 1172,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.labial-inferior.d",
+   "nome": {
+    "pt-BR": "Artéria labial inferior",
+    "en": "Inferior labial artery",
+    "la": "Arteria labialis inferior"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Inferior labial artery.r"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4393"
+   },
+   "triangulos": 2324,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.labial-inferior.e",
+   "nome": {
+    "pt-BR": "Artéria labial inferior",
+    "en": "Inferior labial artery",
+    "la": "Arteria labialis inferior"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Inferior labial artery.l"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4393"
+   },
+   "triangulos": 2324,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.labial-superior.d",
+   "nome": {
+    "pt-BR": "Artéria labial superior",
+    "en": "Superior labial artery",
+    "la": "Arteria labialis superior"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Superior labial artery.r"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4394"
+   },
+   "triangulos": 1172,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.labial-superior.e",
+   "nome": {
+    "pt-BR": "Artéria labial superior",
+    "en": "Superior labial artery",
+    "la": "Arteria labialis superior"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Superior labial artery.l"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4394"
+   },
+   "triangulos": 1172,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.mentual.d",
+   "nome": {
+    "pt-BR": "Ramo mentual da artéria alveolar inferior",
+    "en": "Mental branch of inferior alveolar artery",
+    "la": "Ramus mentalis arteriae alveolaris inferioris"
+   },
+   "sinonimos": [
+    "artéria mentual",
+    "artéria mentoniana"
+   ],
+   "categoria": "arterias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Mental branch of inferior alveolar artery.r"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4430"
+   },
+   "triangulos": 1192,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.mentual.e",
+   "nome": {
+    "pt-BR": "Ramo mentual da artéria alveolar inferior",
+    "en": "Mental branch of inferior alveolar artery",
+    "la": "Ramus mentalis arteriae alveolaris inferioris"
+   },
+   "sinonimos": [
+    "artéria mentual",
+    "artéria mentoniana"
+   ],
+   "categoria": "arterias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Mental branch of inferior alveolar artery.l"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4430"
+   },
+   "triangulos": 1192,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.supraorbital.d",
+   "nome": {
+    "pt-BR": "Artéria supraorbital",
+    "en": "Supra-orbital artery",
+    "la": "Arteria supraorbitalis"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Supra-orbital artery.r"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4486"
+   },
+   "triangulos": 8392,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.supraorbital.e",
+   "nome": {
+    "pt-BR": "Artéria supraorbital",
+    "en": "Supra-orbital artery",
+    "la": "Arteria supraorbitalis"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Supra-orbital artery.l"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4486"
+   },
+   "triangulos": 8392,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.supratroclear.d",
+   "nome": {
+    "pt-BR": "Artéria supratroclear",
+    "en": "Supratrochlear artery",
+    "la": "Arteria supratrochlearis"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Supratrochlear artery.r"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4499"
+   },
+   "triangulos": 5840,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.supratroclear.e",
+   "nome": {
+    "pt-BR": "Artéria supratroclear",
+    "en": "Supratrochlear artery",
+    "la": "Arteria supratrochlearis"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Supratrochlear artery.l"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4499"
+   },
+   "triangulos": 5840,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.temporal-superficial.d",
+   "nome": {
+    "pt-BR": "Artéria temporal superficial",
+    "en": "Superficial temporal artery",
+    "la": "Arteria temporalis superficialis"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Superficial temporal artery.r"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4413"
+   },
+   "triangulos": 26488,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.temporal-superficial.e",
+   "nome": {
+    "pt-BR": "Artéria temporal superficial",
+    "en": "Superficial temporal artery",
+    "la": "Arteria temporalis superficialis"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Superficial temporal artery.l"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4413"
+   },
+   "triangulos": 26488,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.transversa-face.d",
+   "nome": {
+    "pt-BR": "Artéria transversa da face",
+    "en": "Transverse facial artery",
+    "la": "Arteria transversa faciei"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Transverse facial artery.r"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4416"
+   },
+   "triangulos": 4052,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.arteria.transversa-face.e",
+   "nome": {
+    "pt-BR": "Artéria transversa da face",
+    "en": "Transverse facial artery",
+    "la": "Arteria transversa faciei"
+   },
+   "sinonimos": [],
+   "categoria": "arterias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "arterias",
+    "no": "Transverse facial artery.l"
+   },
+   "transformacao": null,
+   "material": "arteria",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4416"
+   },
+   "triangulos": 4052,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.boca.gengiva",
+   "nome": {
+    "pt-BR": "Gengiva",
+    "en": "Gingiva"
+   },
+   "sinonimos": [],
+   "categoria": "boca",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "boca",
+    "no": "Gingiva"
+   },
+   "transformacao": null,
+   "material": "mucosa",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 24596,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.boca.lingua",
+   "nome": {
+    "pt-BR": "Língua",
+    "en": "Tongue"
+   },
+   "sinonimos": [],
+   "categoria": "boca",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "boca",
+    "no": "Tongue"
+   },
+   "transformacao": null,
+   "material": "mucosa",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 682,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.cartilagem.alar-maior.d",
+   "nome": {
+    "pt-BR": "Cartilagem alar maior",
+    "en": "Major alar cartilage"
+   },
+   "sinonimos": [],
+   "categoria": "cartilagens",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "cartilagens",
+    "no": "Major alar cartilage.r"
+   },
+   "transformacao": null,
+   "material": "cartilagem",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 344,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.cartilagem.alar-maior.e",
+   "nome": {
+    "pt-BR": "Cartilagem alar maior",
+    "en": "Major alar cartilage"
+   },
+   "sinonimos": [],
+   "categoria": "cartilagens",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "cartilagens",
+    "no": "Major alar cartilage.l"
+   },
+   "transformacao": null,
+   "material": "cartilagem",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 344,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.cartilagem.processo-lateral-septo.d",
+   "nome": {
+    "pt-BR": "Processo lateral da cartilagem do septo nasal",
+    "en": "Lateral process of nasal septal cartilage"
+   },
+   "sinonimos": [
+    "cartilagem lateral superior"
+   ],
+   "categoria": "cartilagens",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "cartilagens",
+    "no": "Lateral process of nasal septal cartilage.r"
+   },
+   "transformacao": null,
+   "material": "cartilagem",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 347,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.cartilagem.processo-lateral-septo.e",
+   "nome": {
+    "pt-BR": "Processo lateral da cartilagem do septo nasal",
+    "en": "Lateral process of nasal septal cartilage"
+   },
+   "sinonimos": [
+    "cartilagem lateral superior"
+   ],
+   "categoria": "cartilagens",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "cartilagens",
+    "no": "Lateral process of nasal septal cartilage.l"
+   },
+   "transformacao": null,
+   "material": "cartilagem",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 347,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.cartilagem.septo-nasal",
+   "nome": {
+    "pt-BR": "Cartilagem do septo nasal",
+    "en": "Nasal septal cartilage"
+   },
+   "sinonimos": [],
+   "categoria": "cartilagens",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "cartilagens",
+    "no": "Nasal septal cartilage"
+   },
+   "transformacao": null,
+   "material": "cartilagem",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 360,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.cartilagem.tireoidea",
+   "nome": {
+    "pt-BR": "Cartilagem tireóidea",
+    "en": "Thyroid cartilage"
+   },
+   "sinonimos": [],
+   "categoria": "cartilagens",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "cartilagens",
+    "no": "Thyroid cartilage"
+   },
+   "transformacao": null,
+   "material": "cartilagem",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 4340,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.canino.inferior.d",
+   "nome": {
+    "pt-BR": "Canino inferior",
+    "en": "Lower canine"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower canine.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1276,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.canino.inferior.e",
+   "nome": {
+    "pt-BR": "Canino inferior",
+    "en": "Lower canine"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower canine.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1276,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.canino.superior.d",
+   "nome": {
+    "pt-BR": "Canino superior",
+    "en": "Upper canine"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper canine.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1470,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.canino.superior.e",
+   "nome": {
+    "pt-BR": "Canino superior",
+    "en": "Upper canine"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper canine.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1470,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.incisivo-central.inferior.d",
+   "nome": {
+    "pt-BR": "Incisivo central inferior",
+    "en": "Lower medial incisor"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower medial incisor.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 984,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.incisivo-central.inferior.e",
+   "nome": {
+    "pt-BR": "Incisivo central inferior",
+    "en": "Lower medial incisor"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower medial incisor.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 984,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.incisivo-central.superior.d",
+   "nome": {
+    "pt-BR": "Incisivo central superior",
+    "en": "Upper medial incisor"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper medial incisor.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1368,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.incisivo-central.superior.e",
+   "nome": {
+    "pt-BR": "Incisivo central superior",
+    "en": "Upper medial incisor"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper medial incisor.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1368,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.incisivo-lateral.inferior.d",
+   "nome": {
+    "pt-BR": "Incisivo lateral inferior",
+    "en": "Lower lateral incisor"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower lateral incisor.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1040,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.incisivo-lateral.inferior.e",
+   "nome": {
+    "pt-BR": "Incisivo lateral inferior",
+    "en": "Lower lateral incisor"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower lateral incisor.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1040,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.incisivo-lateral.superior.d",
+   "nome": {
+    "pt-BR": "Incisivo lateral superior",
+    "en": "Upper lateral incisor"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper lateral incisor.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1454,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.incisivo-lateral.superior.e",
+   "nome": {
+    "pt-BR": "Incisivo lateral superior",
+    "en": "Upper lateral incisor"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper lateral incisor.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1454,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.primeiro-molar.inferior.d",
+   "nome": {
+    "pt-BR": "Primeiro molar inferior",
+    "en": "Lower first molar tooth"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower first molar tooth.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 4508,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.primeiro-molar.inferior.e",
+   "nome": {
+    "pt-BR": "Primeiro molar inferior",
+    "en": "Lower first molar tooth"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower first molar tooth.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 4508,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.primeiro-molar.superior.d",
+   "nome": {
+    "pt-BR": "Primeiro molar superior",
+    "en": "Upper first molar tooth"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper first molar tooth.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2176,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.primeiro-molar.superior.e",
+   "nome": {
+    "pt-BR": "Primeiro molar superior",
+    "en": "Upper first molar tooth"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper first molar tooth.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2176,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.primeiro-pre-molar.inferior.d",
+   "nome": {
+    "pt-BR": "Primeiro pré-molar inferior",
+    "en": "Lower first premolar"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower first premolar.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1222,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.primeiro-pre-molar.inferior.e",
+   "nome": {
+    "pt-BR": "Primeiro pré-molar inferior",
+    "en": "Lower first premolar"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower first premolar.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1222,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.primeiro-pre-molar.superior.d",
+   "nome": {
+    "pt-BR": "Primeiro pré-molar superior",
+    "en": "Upper first premolar"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper first premolar.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1684,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.primeiro-pre-molar.superior.e",
+   "nome": {
+    "pt-BR": "Primeiro pré-molar superior",
+    "en": "Upper first premolar"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper first premolar.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1684,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.segundo-molar.inferior.d",
+   "nome": {
+    "pt-BR": "Segundo molar inferior",
+    "en": "Lower second molar tooth"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower second molar tooth.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1676,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.segundo-molar.inferior.e",
+   "nome": {
+    "pt-BR": "Segundo molar inferior",
+    "en": "Lower second molar tooth"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower second molar tooth.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1676,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.segundo-molar.superior.d",
+   "nome": {
+    "pt-BR": "Segundo molar superior",
+    "en": "Upper second molar tooth"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper second molar tooth.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1844,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.segundo-molar.superior.e",
+   "nome": {
+    "pt-BR": "Segundo molar superior",
+    "en": "Upper second molar tooth"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper second molar tooth.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1844,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.segundo-pre-molar.inferior.d",
+   "nome": {
+    "pt-BR": "Segundo pré-molar inferior",
+    "en": "Lower second premolar"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower second premolar.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1180,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.segundo-pre-molar.inferior.e",
+   "nome": {
+    "pt-BR": "Segundo pré-molar inferior",
+    "en": "Lower second premolar"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada inferior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Lower second premolar.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1180,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.segundo-pre-molar.superior.d",
+   "nome": {
+    "pt-BR": "Segundo pré-molar superior",
+    "en": "Upper second premolar"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper second premolar.r"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1554,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.dente.segundo-pre-molar.superior.e",
+   "nome": {
+    "pt-BR": "Segundo pré-molar superior",
+    "en": "Upper second premolar"
+   },
+   "sinonimos": [
+    "dente",
+    "arcada superior"
+   ],
+   "categoria": "dentes",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "dentes",
+    "no": "Upper second premolar.l"
+   },
+   "transformacao": null,
+   "material": "dente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1554,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.fascia.aponeurose-epicranica.d",
+   "nome": {
+    "pt-BR": "Aponeurose epicrânica",
+    "en": "Epicranial aponeurosis"
+   },
+   "sinonimos": [
+    "gálea"
+   ],
+   "categoria": "fascias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "fascias",
+    "no": "Epicranial aponeurosis.r"
+   },
+   "transformacao": null,
+   "material": "fascia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 20118,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.fascia.aponeurose-epicranica.e",
+   "nome": {
+    "pt-BR": "Aponeurose epicrânica",
+    "en": "Epicranial aponeurosis"
+   },
+   "sinonimos": [
+    "gálea"
+   ],
+   "categoria": "fascias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "fascias",
+    "no": "Epicranial aponeurosis.l"
+   },
+   "transformacao": null,
+   "material": "fascia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 20118,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.fascia.masseterica.d",
+   "nome": {
+    "pt-BR": "Fáscia massetérica",
+    "en": "Masseteric fascia",
+    "la": "Fascia masseterica"
+   },
+   "sinonimos": [],
+   "categoria": "fascias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "fascias",
+    "no": "Masseteric fascia.r"
+   },
+   "transformacao": null,
+   "material": "fascia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2136"
+   },
+   "triangulos": 398,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.fascia.masseterica.e",
+   "nome": {
+    "pt-BR": "Fáscia massetérica",
+    "en": "Masseteric fascia",
+    "la": "Fascia masseterica"
+   },
+   "sinonimos": [],
+   "categoria": "fascias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "fascias",
+    "no": "Masseteric fascia.l"
+   },
+   "transformacao": null,
+   "material": "fascia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2136"
+   },
+   "triangulos": 398,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.fascia.temporal-superficial.d",
+   "nome": {
+    "pt-BR": "Lâmina superficial da fáscia temporal",
+    "en": "Superficial layer of temporal fascia",
+    "la": "Lamina superficialis fasciae temporalis"
+   },
+   "sinonimos": [],
+   "categoria": "fascias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "fascias",
+    "no": "Superficial layer of temporal fascia.r"
+   },
+   "transformacao": null,
+   "material": "fascia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2139"
+   },
+   "triangulos": 685,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.fascia.temporal-superficial.e",
+   "nome": {
+    "pt-BR": "Lâmina superficial da fáscia temporal",
+    "en": "Superficial layer of temporal fascia",
+    "la": "Lamina superficialis fasciae temporalis"
+   },
+   "sinonimos": [],
+   "categoria": "fascias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "fascias",
+    "no": "Superficial layer of temporal fascia.l"
+   },
+   "transformacao": null,
+   "material": "fascia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2139"
+   },
+   "triangulos": 685,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.glandula.ducto-parotideo.d",
+   "nome": {
+    "pt-BR": "Ducto parotídeo",
+    "en": "Parotid duct",
+    "la": "Ductus parotideus"
+   },
+   "sinonimos": [
+    "ducto de Stensen"
+   ],
+   "categoria": "glandulas",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "glandulas",
+    "no": "Parotid duct.r"
+   },
+   "transformacao": null,
+   "material": "glandula",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2805"
+   },
+   "triangulos": 1172,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.glandula.ducto-parotideo.e",
+   "nome": {
+    "pt-BR": "Ducto parotídeo",
+    "en": "Parotid duct",
+    "la": "Ductus parotideus"
+   },
+   "sinonimos": [
+    "ducto de Stensen"
+   ],
+   "categoria": "glandulas",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "glandulas",
+    "no": "Parotid duct.l"
+   },
+   "transformacao": null,
+   "material": "glandula",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2805"
+   },
+   "triangulos": 1172,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.glandula.lacrimal.d",
+   "nome": {
+    "pt-BR": "Glândula lacrimal",
+    "en": "Lacrimal gland"
+   },
+   "sinonimos": [],
+   "categoria": "glandulas",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "glandulas",
+    "no": "Lacrimal gland.r"
+   },
+   "transformacao": null,
+   "material": "glandula",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1810,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.glandula.lacrimal.e",
+   "nome": {
+    "pt-BR": "Glândula lacrimal",
+    "en": "Lacrimal gland"
+   },
+   "sinonimos": [],
+   "categoria": "glandulas",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "glandulas",
+    "no": "Lacrimal gland.l"
+   },
+   "transformacao": null,
+   "material": "glandula",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1810,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.glandula.parotida.d",
+   "nome": {
+    "pt-BR": "Glândula parótida",
+    "en": "Parotid gland",
+    "la": "Glandula parotidea"
+   },
+   "sinonimos": [],
+   "categoria": "glandulas",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "glandulas",
+    "no": "Parotid gland.r"
+   },
+   "transformacao": null,
+   "material": "glandula",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2800"
+   },
+   "triangulos": 1704,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.glandula.parotida.e",
+   "nome": {
+    "pt-BR": "Glândula parótida",
+    "en": "Parotid gland",
+    "la": "Glandula parotidea"
+   },
+   "sinonimos": [],
+   "categoria": "glandulas",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "glandulas",
+    "no": "Parotid gland.l"
+   },
+   "transformacao": null,
+   "material": "glandula",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2800"
+   },
+   "triangulos": 1704,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.glandula.sublingual.d",
+   "nome": {
+    "pt-BR": "Glândula sublingual",
+    "en": "Sublingual gland"
+   },
+   "sinonimos": [],
+   "categoria": "glandulas",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "glandulas",
+    "no": "Sublingual gland.r"
+   },
+   "transformacao": null,
+   "material": "glandula",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 324,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.glandula.sublingual.e",
+   "nome": {
+    "pt-BR": "Glândula sublingual",
+    "en": "Sublingual gland"
+   },
+   "sinonimos": [],
+   "categoria": "glandulas",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "glandulas",
+    "no": "Sublingual gland.l"
+   },
+   "transformacao": null,
+   "material": "glandula",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 324,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.glandula.submandibular.d",
+   "nome": {
+    "pt-BR": "Glândula submandibular",
+    "en": "Submandibular gland"
+   },
+   "sinonimos": [],
+   "categoria": "glandulas",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "glandulas",
+    "no": "Submandibular gland.r"
+   },
+   "transformacao": null,
+   "material": "glandula",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 392,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.glandula.submandibular.e",
+   "nome": {
+    "pt-BR": "Glândula submandibular",
+    "en": "Submandibular gland"
+   },
+   "sinonimos": [],
+   "categoria": "glandulas",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "glandulas",
+    "no": "Submandibular gland.l"
+   },
+   "transformacao": null,
+   "material": "glandula",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 392,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.abaixador-angulo-boca.d",
+   "nome": {
+    "pt-BR": "Músculo abaixador do ângulo da boca",
+    "en": "Depressor anguli oris",
+    "la": "Depressor anguli oris"
+   },
+   "sinonimos": [
+    "depressor do ângulo da boca",
+    "triangular"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Depressor anguli oris.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2076"
+   },
+   "triangulos": 594,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.abaixador-angulo-boca.e",
+   "nome": {
+    "pt-BR": "Músculo abaixador do ângulo da boca",
+    "en": "Depressor anguli oris",
+    "la": "Depressor anguli oris"
+   },
+   "sinonimos": [
+    "depressor do ângulo da boca",
+    "triangular"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Depressor anguli oris.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2076"
+   },
+   "triangulos": 594,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.abaixador-labio-inferior.d",
+   "nome": {
+    "pt-BR": "Músculo abaixador do lábio inferior",
+    "en": "Depressor labii inferioris",
+    "la": "Depressor labii inferioris"
+   },
+   "sinonimos": [
+    "depressor do lábio inferior",
+    "quadrado do mento"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Depressor labii inferioris.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2083"
+   },
+   "triangulos": 832,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.abaixador-labio-inferior.e",
+   "nome": {
+    "pt-BR": "Músculo abaixador do lábio inferior",
+    "en": "Depressor labii inferioris",
+    "la": "Depressor labii inferioris"
+   },
+   "sinonimos": [
+    "depressor do lábio inferior",
+    "quadrado do mento"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Depressor labii inferioris.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2083"
+   },
+   "triangulos": 832,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.abaixador-septo-nasal.d",
+   "nome": {
+    "pt-BR": "Músculo abaixador do septo nasal",
+    "en": "Depressor septi nasi",
+    "la": "Depressor septi nasi"
+   },
+   "sinonimos": [
+    "depressor do septo nasal"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Depressor septi nasi.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2065"
+   },
+   "triangulos": 276,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.abaixador-septo-nasal.e",
+   "nome": {
+    "pt-BR": "Músculo abaixador do septo nasal",
+    "en": "Depressor septi nasi",
+    "la": "Depressor septi nasi"
+   },
+   "sinonimos": [
+    "depressor do septo nasal"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Depressor septi nasi.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2065"
+   },
+   "triangulos": 276,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.bucinador.d",
+   "nome": {
+    "pt-BR": "Músculo bucinador",
+    "en": "Bucinator",
+    "la": "Musculus buccinator"
+   },
+   "sinonimos": [
+    "buccinator"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Bucinator.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2086"
+   },
+   "triangulos": 884,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.bucinador.e",
+   "nome": {
+    "pt-BR": "Músculo bucinador",
+    "en": "Bucinator",
+    "la": "Musculus buccinator"
+   },
+   "sinonimos": [
+    "buccinator"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Bucinator.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2086"
+   },
+   "triangulos": 884,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.corrugador-supercilio.d",
+   "nome": {
+    "pt-BR": "Músculo corrugador do supercílio",
+    "en": "Corrugator supercilii",
+    "la": "Musculus corrugator supercilii"
+   },
+   "sinonimos": [
+    "corrugador"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Corrugator supercilii.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2071"
+   },
+   "triangulos": 278,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.corrugador-supercilio.e",
+   "nome": {
+    "pt-BR": "Músculo corrugador do supercílio",
+    "en": "Corrugator supercilii",
+    "la": "Musculus corrugator supercilii"
+   },
+   "sinonimos": [
+    "corrugador"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Corrugator supercilii.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2071"
+   },
+   "triangulos": 278,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.digastrico.anterior.d",
+   "nome": {
+    "pt-BR": "Ventre anterior do músculo digástrico",
+    "en": "Anterior belly of digastric muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Anterior belly of digastric muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 392,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.digastrico.anterior.e",
+   "nome": {
+    "pt-BR": "Ventre anterior do músculo digástrico",
+    "en": "Anterior belly of digastric muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Anterior belly of digastric muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 392,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.digastrico.posterior.d",
+   "nome": {
+    "pt-BR": "Ventre posterior do músculo digástrico",
+    "en": "Posterior belly of digastric muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Posterior belly of digastric muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1276,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.digastrico.posterior.e",
+   "nome": {
+    "pt-BR": "Ventre posterior do músculo digástrico",
+    "en": "Posterior belly of digastric muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Posterior belly of digastric muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1276,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.esplenio-cabeca.d",
+   "nome": {
+    "pt-BR": "Músculo esplênio da cabeça",
+    "en": "Splenius capitis muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Splenius capitis muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 3116,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.esplenio-cabeca.e",
+   "nome": {
+    "pt-BR": "Músculo esplênio da cabeça",
+    "en": "Splenius capitis muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Splenius capitis muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 3116,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.esternocleidomastoideo.d",
+   "nome": {
+    "pt-BR": "Músculo esternocleidomastóideo",
+    "en": "Sternocleidomastoid muscle"
+   },
+   "sinonimos": [
+    "ECM"
+   ],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Sternocleidomastoid muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2490,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.esternocleidomastoideo.e",
+   "nome": {
+    "pt-BR": "Músculo esternocleidomastóideo",
+    "en": "Sternocleidomastoid muscle"
+   },
+   "sinonimos": [
+    "ECM"
+   ],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Sternocleidomastoid muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2490,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.estilo-hioideo.d",
+   "nome": {
+    "pt-BR": "Músculo estilo-hióideo",
+    "en": "Stylohyoid muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Stylohyoid muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 694,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.estilo-hioideo.e",
+   "nome": {
+    "pt-BR": "Músculo estilo-hióideo",
+    "en": "Stylohyoid muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Stylohyoid muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 694,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.frontal.d",
+   "nome": {
+    "pt-BR": "Ventre frontal do músculo occipitofrontal",
+    "en": "Frontalis muscle",
+    "la": "Musculus frontalis"
+   },
+   "sinonimos": [
+    "músculo frontal",
+    "frontalis"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Frontalis muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2056"
+   },
+   "triangulos": 5874,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.frontal.e",
+   "nome": {
+    "pt-BR": "Ventre frontal do músculo occipitofrontal",
+    "en": "Frontalis muscle",
+    "la": "Musculus frontalis"
+   },
+   "sinonimos": [
+    "músculo frontal",
+    "frontalis"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Frontalis muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2056"
+   },
+   "triangulos": 5874,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.genio-hioideo.d",
+   "nome": {
+    "pt-BR": "Músculo gênio-hióideo",
+    "en": "Geniohyoid muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Geniohyoid muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 530,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.genio-hioideo.e",
+   "nome": {
+    "pt-BR": "Músculo gênio-hióideo",
+    "en": "Geniohyoid muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Geniohyoid muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 530,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.levantador-angulo-boca.d",
+   "nome": {
+    "pt-BR": "Músculo levantador do ângulo da boca",
+    "en": "Levator anguli oris",
+    "la": "Levator anguli oris"
+   },
+   "sinonimos": [
+    "canino"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Levator anguli oris.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2084"
+   },
+   "triangulos": 330,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.levantador-angulo-boca.e",
+   "nome": {
+    "pt-BR": "Músculo levantador do ângulo da boca",
+    "en": "Levator anguli oris",
+    "la": "Levator anguli oris"
+   },
+   "sinonimos": [
+    "canino"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Levator anguli oris.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2084"
+   },
+   "triangulos": 330,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.levantador-labio-asa-nariz.d",
+   "nome": {
+    "pt-BR": "Músculo levantador do lábio superior e da asa do nariz",
+    "en": "Levator nasolabialis",
+    "la": "Levator nasolabialis"
+   },
+   "sinonimos": [
+    "levantador nasolabial"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Levator nasolabialis.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2082"
+   },
+   "triangulos": 172,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.levantador-labio-asa-nariz.e",
+   "nome": {
+    "pt-BR": "Músculo levantador do lábio superior e da asa do nariz",
+    "en": "Levator nasolabialis",
+    "la": "Levator nasolabialis"
+   },
+   "sinonimos": [
+    "levantador nasolabial"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Levator nasolabialis.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2082"
+   },
+   "triangulos": 172,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.levantador-labio-superior.d",
+   "nome": {
+    "pt-BR": "Músculo levantador do lábio superior",
+    "en": "Levator labii superioris",
+    "la": "Levator labii superioris"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Levator labii superioris.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2081"
+   },
+   "triangulos": 540,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.levantador-labio-superior.e",
+   "nome": {
+    "pt-BR": "Músculo levantador do lábio superior",
+    "en": "Levator labii superioris",
+    "la": "Levator labii superioris"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Levator labii superioris.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2081"
+   },
+   "triangulos": 540,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.levantador-palpebra.d",
+   "nome": {
+    "pt-BR": "Músculo levantador da pálpebra superior",
+    "en": "Levator palpebrae superioris"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Levator palpebrae superioris.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2152,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.levantador-palpebra.e",
+   "nome": {
+    "pt-BR": "Músculo levantador da pálpebra superior",
+    "en": "Levator palpebrae superioris"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Levator palpebrae superioris.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2152,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.masseter.profunda.d",
+   "nome": {
+    "pt-BR": "Parte profunda do músculo masseter",
+    "en": "Deep part of masseter",
+    "la": "Pars profunda masseteris"
+   },
+   "sinonimos": [
+    "masseter"
+   ],
+   "categoria": "musculos-mastigacao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-mastigacao",
+    "no": "Deep part of masseter.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2107"
+   },
+   "triangulos": 994,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.masseter.profunda.e",
+   "nome": {
+    "pt-BR": "Parte profunda do músculo masseter",
+    "en": "Deep part of masseter",
+    "la": "Pars profunda masseteris"
+   },
+   "sinonimos": [
+    "masseter"
+   ],
+   "categoria": "musculos-mastigacao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-mastigacao",
+    "no": "Deep part of masseter.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2107"
+   },
+   "triangulos": 994,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.masseter.superficial.d",
+   "nome": {
+    "pt-BR": "Parte superficial do músculo masseter",
+    "en": "Superficial part of masseter",
+    "la": "Pars superficialis masseteris"
+   },
+   "sinonimos": [
+    "masseter"
+   ],
+   "categoria": "musculos-mastigacao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-mastigacao",
+    "no": "Superficial part of masseter.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2106"
+   },
+   "triangulos": 1404,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.masseter.superficial.e",
+   "nome": {
+    "pt-BR": "Parte superficial do músculo masseter",
+    "en": "Superficial part of masseter",
+    "la": "Pars superficialis masseteris"
+   },
+   "sinonimos": [
+    "masseter"
+   ],
+   "categoria": "musculos-mastigacao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-mastigacao",
+    "no": "Superficial part of masseter.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2106"
+   },
+   "triangulos": 1404,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.mentual.d",
+   "nome": {
+    "pt-BR": "Músculo mentual",
+    "en": "Mentalis muscle",
+    "la": "Musculus mentalis"
+   },
+   "sinonimos": [
+    "mentalis",
+    "mentoniano"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Mentalis muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2087"
+   },
+   "triangulos": 166,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.mentual.e",
+   "nome": {
+    "pt-BR": "Músculo mentual",
+    "en": "Mentalis muscle",
+    "la": "Musculus mentalis"
+   },
+   "sinonimos": [
+    "mentalis",
+    "mentoniano"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Mentalis muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2087"
+   },
+   "triangulos": 166,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.milo-hioideo.d",
+   "nome": {
+    "pt-BR": "Músculo milo-hióideo",
+    "en": "Mylohyoid muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Mylohyoid muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1122,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.milo-hioideo.e",
+   "nome": {
+    "pt-BR": "Músculo milo-hióideo",
+    "en": "Mylohyoid muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-pescoco",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-pescoco",
+    "no": "Mylohyoid muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1122,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.nasal.d",
+   "nome": {
+    "pt-BR": "Músculo nasal",
+    "en": "Nasalis muscle",
+    "la": "Musculus nasalis"
+   },
+   "sinonimos": [
+    "nasalis"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Nasalis muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2062"
+   },
+   "triangulos": 704,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.nasal.e",
+   "nome": {
+    "pt-BR": "Músculo nasal",
+    "en": "Nasalis muscle",
+    "la": "Musculus nasalis"
+   },
+   "sinonimos": [
+    "nasalis"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Nasalis muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2062"
+   },
+   "triangulos": 704,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.obliquo-inferior.d",
+   "nome": {
+    "pt-BR": "Músculo oblíquo inferior",
+    "en": "Inferior oblique muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Inferior oblique muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1148,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.obliquo-inferior.e",
+   "nome": {
+    "pt-BR": "Músculo oblíquo inferior",
+    "en": "Inferior oblique muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Inferior oblique muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1148,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.obliquo-superior.d",
+   "nome": {
+    "pt-BR": "Músculo oblíquo superior",
+    "en": "Superior oblique muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Superior oblique muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1750,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.obliquo-superior.e",
+   "nome": {
+    "pt-BR": "Músculo oblíquo superior",
+    "en": "Superior oblique muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Superior oblique muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1750,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.occipital.d",
+   "nome": {
+    "pt-BR": "Ventre occipital do músculo occipitofrontal",
+    "en": "Occipitalis muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Occipitalis muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2602,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.occipital.e",
+   "nome": {
+    "pt-BR": "Ventre occipital do músculo occipitofrontal",
+    "en": "Occipitalis muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Occipitalis muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2602,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.orbicular-boca.d",
+   "nome": {
+    "pt-BR": "Músculo orbicular da boca",
+    "en": "Orbicularis oris muscle",
+    "la": "Musculus orbicularis oris"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Orbicularis oris muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2073"
+   },
+   "triangulos": 1880,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.orbicular-boca.e",
+   "nome": {
+    "pt-BR": "Músculo orbicular da boca",
+    "en": "Orbicularis oris muscle",
+    "la": "Musculus orbicularis oris"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Orbicularis oris muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2073"
+   },
+   "triangulos": 1880,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.orbicular-olho.orbital.d",
+   "nome": {
+    "pt-BR": "Parte orbital do músculo orbicular do olho",
+    "en": "Orbital part of orbicularis oculi",
+    "la": "Pars orbitalis musculi orbicularis oculi"
+   },
+   "sinonimos": [
+    "orbicular do olho"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Orbital part of orbicularis oculi.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2070"
+   },
+   "triangulos": 2390,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.orbicular-olho.orbital.e",
+   "nome": {
+    "pt-BR": "Parte orbital do músculo orbicular do olho",
+    "en": "Orbital part of orbicularis oculi",
+    "la": "Pars orbitalis musculi orbicularis oculi"
+   },
+   "sinonimos": [
+    "orbicular do olho"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Orbital part of orbicularis oculi.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2070"
+   },
+   "triangulos": 2390,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.orbicular-olho.palpebral.d",
+   "nome": {
+    "pt-BR": "Parte palpebral do músculo orbicular do olho",
+    "en": "Palpebral part of orbicularis oculi",
+    "la": "Pars palpebralis musculi orbicularis oculi"
+   },
+   "sinonimos": [
+    "orbicular do olho"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Palpebral part of orbicularis oculi.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2067"
+   },
+   "triangulos": 830,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.orbicular-olho.palpebral.e",
+   "nome": {
+    "pt-BR": "Parte palpebral do músculo orbicular do olho",
+    "en": "Palpebral part of orbicularis oculi",
+    "la": "Pars palpebralis musculi orbicularis oculi"
+   },
+   "sinonimos": [
+    "orbicular do olho"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Palpebral part of orbicularis oculi.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2067"
+   },
+   "triangulos": 830,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.platisma.d",
+   "nome": {
+    "pt-BR": "Músculo platisma",
+    "en": "Platysma",
+    "la": "Platysma"
+   },
+   "sinonimos": [
+    "platysma"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Platysma.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2147"
+   },
+   "triangulos": 3080,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.platisma.e",
+   "nome": {
+    "pt-BR": "Músculo platisma",
+    "en": "Platysma",
+    "la": "Platysma"
+   },
+   "sinonimos": [
+    "platysma"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Platysma.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2147"
+   },
+   "triangulos": 3080,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.procero.d",
+   "nome": {
+    "pt-BR": "Músculo prócero",
+    "en": "Procerus muscle",
+    "la": "Musculus procerus"
+   },
+   "sinonimos": [
+    "prócero",
+    "procerus"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Procerus muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2061"
+   },
+   "triangulos": 546,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.procero.e",
+   "nome": {
+    "pt-BR": "Músculo prócero",
+    "en": "Procerus muscle",
+    "la": "Musculus procerus"
+   },
+   "sinonimos": [
+    "prócero",
+    "procerus"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Procerus muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2061"
+   },
+   "triangulos": 546,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.pterigoideo-lateral.inferior.d",
+   "nome": {
+    "pt-BR": "Cabeça inferior do músculo pterigóideo lateral",
+    "en": "Inferior head of lateral pterygoid muscle",
+    "la": "Caput inferius musculi pterygoidei lateralis"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-mastigacao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-mastigacao",
+    "no": "Inferior head of lateral pterygoid muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2111"
+   },
+   "triangulos": 326,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.pterigoideo-lateral.inferior.e",
+   "nome": {
+    "pt-BR": "Cabeça inferior do músculo pterigóideo lateral",
+    "en": "Inferior head of lateral pterygoid muscle",
+    "la": "Caput inferius musculi pterygoidei lateralis"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-mastigacao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-mastigacao",
+    "no": "Inferior head of lateral pterygoid muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2111"
+   },
+   "triangulos": 326,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.pterigoideo-lateral.superior.d",
+   "nome": {
+    "pt-BR": "Cabeça superior do músculo pterigóideo lateral",
+    "en": "Superior head of lateral pterygoid muscle",
+    "la": "Caput superius musculi pterygoidei lateralis"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-mastigacao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-mastigacao",
+    "no": "Superior head of lateral pterygoid muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2110"
+   },
+   "triangulos": 226,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.pterigoideo-lateral.superior.e",
+   "nome": {
+    "pt-BR": "Cabeça superior do músculo pterigóideo lateral",
+    "en": "Superior head of lateral pterygoid muscle",
+    "la": "Caput superius musculi pterygoidei lateralis"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-mastigacao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-mastigacao",
+    "no": "Superior head of lateral pterygoid muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2110"
+   },
+   "triangulos": 226,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.pterigoideo-medial.d",
+   "nome": {
+    "pt-BR": "Músculo pterigóideo medial",
+    "en": "Medial pterygoid muscle",
+    "la": "Musculus pterygoideus medialis"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-mastigacao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-mastigacao",
+    "no": "Medial pterygoid muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2113"
+   },
+   "triangulos": 496,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.pterigoideo-medial.e",
+   "nome": {
+    "pt-BR": "Músculo pterigóideo medial",
+    "en": "Medial pterygoid muscle",
+    "la": "Musculus pterygoideus medialis"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-mastigacao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-mastigacao",
+    "no": "Medial pterygoid muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2113"
+   },
+   "triangulos": 496,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.reto-inferior.d",
+   "nome": {
+    "pt-BR": "Músculo reto inferior",
+    "en": "Inferior rectus muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Inferior rectus muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1736,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.reto-inferior.e",
+   "nome": {
+    "pt-BR": "Músculo reto inferior",
+    "en": "Inferior rectus muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Inferior rectus muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1736,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.reto-lateral.d",
+   "nome": {
+    "pt-BR": "Músculo reto lateral",
+    "en": "Lateral rectus muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Lateral rectus muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1600,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.reto-lateral.e",
+   "nome": {
+    "pt-BR": "Músculo reto lateral",
+    "en": "Lateral rectus muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Lateral rectus muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1600,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.reto-medial.d",
+   "nome": {
+    "pt-BR": "Músculo reto medial",
+    "en": "Medial rectus muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Medial rectus muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1252,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.reto-medial.e",
+   "nome": {
+    "pt-BR": "Músculo reto medial",
+    "en": "Medial rectus muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Medial rectus muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1252,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.reto-superior.d",
+   "nome": {
+    "pt-BR": "Músculo reto superior",
+    "en": "Superior rectus muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Superior rectus muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1284,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.reto-superior.e",
+   "nome": {
+    "pt-BR": "Músculo reto superior",
+    "en": "Superior rectus muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-olho",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-olho",
+    "no": "Superior rectus muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1284,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.risorio.d",
+   "nome": {
+    "pt-BR": "Músculo risório",
+    "en": "Risorius muscle",
+    "la": "Musculus risorius"
+   },
+   "sinonimos": [
+    "risorius"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Risorius muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2078"
+   },
+   "triangulos": 592,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.risorio.e",
+   "nome": {
+    "pt-BR": "Músculo risório",
+    "en": "Risorius muscle",
+    "la": "Musculus risorius"
+   },
+   "sinonimos": [
+    "risorius"
+   ],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Risorius muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2078"
+   },
+   "triangulos": 592,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.temporal.d",
+   "nome": {
+    "pt-BR": "Músculo temporal",
+    "en": "Temporalis muscle",
+    "la": "Musculus temporalis"
+   },
+   "sinonimos": [
+    "temporalis"
+   ],
+   "categoria": "musculos-mastigacao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-mastigacao",
+    "no": "Temporalis muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2108"
+   },
+   "triangulos": 10260,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.temporal.e",
+   "nome": {
+    "pt-BR": "Músculo temporal",
+    "en": "Temporalis muscle",
+    "la": "Musculus temporalis"
+   },
+   "sinonimos": [
+    "temporalis"
+   ],
+   "categoria": "musculos-mastigacao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-mastigacao",
+    "no": "Temporalis muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2108"
+   },
+   "triangulos": 10260,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.temporoparietal.d",
+   "nome": {
+    "pt-BR": "Músculo temporoparietal",
+    "en": "Temporoparietalis muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Temporoparietalis muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 11972,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.temporoparietal.e",
+   "nome": {
+    "pt-BR": "Músculo temporoparietal",
+    "en": "Temporoparietalis muscle"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Temporoparietalis muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 11972,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.zigomatico-maior.d",
+   "nome": {
+    "pt-BR": "Músculo zigomático maior",
+    "en": "Zygomaticus major muscle",
+    "la": "Musculus zygomaticus major"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Zygomaticus major muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2079"
+   },
+   "triangulos": 798,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.zigomatico-maior.e",
+   "nome": {
+    "pt-BR": "Músculo zigomático maior",
+    "en": "Zygomaticus major muscle",
+    "la": "Musculus zygomaticus major"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Zygomaticus major muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2079"
+   },
+   "triangulos": 798,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.zigomatico-menor.d",
+   "nome": {
+    "pt-BR": "Músculo zigomático menor",
+    "en": "Zygomaticus minor muscle",
+    "la": "Musculus zygomaticus minor"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-expressao",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Zygomaticus minor muscle.r"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2080"
+   },
+   "triangulos": 432,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.musculo.zigomatico-menor.e",
+   "nome": {
+    "pt-BR": "Músculo zigomático menor",
+    "en": "Zygomaticus minor muscle",
+    "la": "Musculus zygomaticus minor"
+   },
+   "sinonimos": [],
+   "categoria": "musculos-expressao",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "musculos-expressao",
+    "no": "Zygomaticus minor muscle.l"
+   },
+   "transformacao": null,
+   "material": "musculo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "2080"
+   },
+   "triangulos": 432,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.nervo.alveolar-inferior.d",
+   "nome": {
+    "pt-BR": "Nervo alveolar inferior",
+    "en": "Inferior alveolar nerve",
+    "la": "Nervus alveolaris inferior"
+   },
+   "sinonimos": [
+    "trigêmeo"
+   ],
+   "categoria": "nervos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "nervos",
+    "no": "Inferior alveolar nerve.r"
+   },
+   "transformacao": null,
+   "material": "nervo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "6274"
+   },
+   "triangulos": 16944,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.nervo.alveolar-inferior.e",
+   "nome": {
+    "pt-BR": "Nervo alveolar inferior",
+    "en": "Inferior alveolar nerve",
+    "la": "Nervus alveolaris inferior"
+   },
+   "sinonimos": [
+    "trigêmeo"
+   ],
+   "categoria": "nervos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "nervos",
+    "no": "Inferior alveolar nerve.l"
+   },
+   "transformacao": null,
+   "material": "nervo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "6274"
+   },
+   "triangulos": 16944,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.nervo.bucal.d",
+   "nome": {
+    "pt-BR": "Nervo bucal",
+    "en": "Buccal nerve",
+    "la": "Nervus buccalis"
+   },
+   "sinonimos": [
+    "trigêmeo"
+   ],
+   "categoria": "nervos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "nervos",
+    "no": "Buccal nerve.r"
+   },
+   "transformacao": null,
+   "material": "nervo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "6258"
+   },
+   "triangulos": 2632,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.nervo.bucal.e",
+   "nome": {
+    "pt-BR": "Nervo bucal",
+    "en": "Buccal nerve",
+    "la": "Nervus buccalis"
+   },
+   "sinonimos": [
+    "trigêmeo"
+   ],
+   "categoria": "nervos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "nervos",
+    "no": "Buccal nerve.l"
+   },
+   "transformacao": null,
+   "material": "nervo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "6258"
+   },
+   "triangulos": 2632,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.nervo.facial.d",
+   "nome": {
+    "pt-BR": "Nervo facial (VII)",
+    "en": "Facial nerve (VII)",
+    "la": "Nervus facialis (VII)"
+   },
+   "sinonimos": [
+    "sétimo par craniano"
+   ],
+   "categoria": "nervos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "nervos",
+    "no": "Facial nerve (VII).r"
+   },
+   "transformacao": null,
+   "material": "nervo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "6284"
+   },
+   "triangulos": 27312,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.nervo.facial.e",
+   "nome": {
+    "pt-BR": "Nervo facial (VII)",
+    "en": "Facial nerve (VII)",
+    "la": "Nervus facialis (VII)"
+   },
+   "sinonimos": [
+    "sétimo par craniano"
+   ],
+   "categoria": "nervos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "nervos",
+    "no": "Facial nerve (VII).l"
+   },
+   "transformacao": null,
+   "material": "nervo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "6284"
+   },
+   "triangulos": 27312,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.nervo.maxilar.d",
+   "nome": {
+    "pt-BR": "Nervo maxilar (V2)",
+    "en": "Maxillary nerve",
+    "la": "Nervus maxillaris"
+   },
+   "sinonimos": [
+    "trigêmeo"
+   ],
+   "categoria": "nervos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "nervos",
+    "no": "Maxillary nerve.r"
+   },
+   "transformacao": null,
+   "material": "nervo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "6216"
+   },
+   "triangulos": 7876,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.nervo.maxilar.e",
+   "nome": {
+    "pt-BR": "Nervo maxilar (V2)",
+    "en": "Maxillary nerve",
+    "la": "Nervus maxillaris"
+   },
+   "sinonimos": [
+    "trigêmeo"
+   ],
+   "categoria": "nervos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "nervos",
+    "no": "Maxillary nerve.l"
+   },
+   "transformacao": null,
+   "material": "nervo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "6216"
+   },
+   "triangulos": 7876,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.nervo.mentual.d",
+   "nome": {
+    "pt-BR": "Nervo mentual",
+    "en": "Mental nerve",
+    "la": "Nervus mentalis"
+   },
+   "sinonimos": [
+    "trigêmeo",
+    "mentoniano"
+   ],
+   "categoria": "nervos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "nervos",
+    "no": "Mental nerve.r"
+   },
+   "transformacao": null,
+   "material": "nervo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "6279"
+   },
+   "triangulos": 2632,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.nervo.mentual.e",
+   "nome": {
+    "pt-BR": "Nervo mentual",
+    "en": "Mental nerve",
+    "la": "Nervus mentalis"
+   },
+   "sinonimos": [
+    "trigêmeo",
+    "mentoniano"
+   ],
+   "categoria": "nervos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "nervos",
+    "no": "Mental nerve.l"
+   },
+   "transformacao": null,
+   "material": "nervo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "6279"
+   },
+   "triangulos": 2632,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.nervo.oftalmico.d",
+   "nome": {
+    "pt-BR": "Nervo oftálmico (V1)",
+    "en": "Ophthalmic nerve",
+    "la": "Nervus ophthalmicus"
+   },
+   "sinonimos": [
+    "trigêmeo"
+   ],
+   "categoria": "nervos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "nervos",
+    "no": "Ophthalmic nerve.r"
+   },
+   "transformacao": null,
+   "material": "nervo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "6196"
+   },
+   "triangulos": 6724,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.nervo.oftalmico.e",
+   "nome": {
+    "pt-BR": "Nervo oftálmico (V1)",
+    "en": "Ophthalmic nerve",
+    "la": "Nervus ophthalmicus"
+   },
+   "sinonimos": [
+    "trigêmeo"
+   ],
+   "categoria": "nervos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "nervos",
+    "no": "Ophthalmic nerve.l"
+   },
+   "transformacao": null,
+   "material": "nervo",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "6196"
+   },
+   "triangulos": 6724,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.olho.cornea.d",
+   "nome": {
+    "pt-BR": "Córnea",
+    "en": "Cornea"
+   },
+   "sinonimos": [],
+   "categoria": "olhos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "olhos",
+    "no": "Cornea.r"
+   },
+   "transformacao": null,
+   "material": "cornea",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2688,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.olho.cornea.e",
+   "nome": {
+    "pt-BR": "Córnea",
+    "en": "Cornea"
+   },
+   "sinonimos": [],
+   "categoria": "olhos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "olhos",
+    "no": "Cornea.l"
+   },
+   "transformacao": null,
+   "material": "cornea",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2688,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.olho.esclera.d",
+   "nome": {
+    "pt-BR": "Esclera",
+    "en": "Sclera"
+   },
+   "sinonimos": [],
+   "categoria": "olhos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "olhos",
+    "no": "Sclera.r"
+   },
+   "transformacao": null,
+   "material": "olho",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 4544,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.olho.esclera.e",
+   "nome": {
+    "pt-BR": "Esclera",
+    "en": "Sclera"
+   },
+   "sinonimos": [],
+   "categoria": "olhos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "olhos",
+    "no": "Sclera.l"
+   },
+   "transformacao": null,
+   "material": "olho",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 4544,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.olho.iris.d",
+   "nome": {
+    "pt-BR": "Íris",
+    "en": "Iris"
+   },
+   "sinonimos": [],
+   "categoria": "olhos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "olhos",
+    "no": "Iris.r"
+   },
+   "transformacao": null,
+   "material": "iris",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 3248,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.olho.iris.e",
+   "nome": {
+    "pt-BR": "Íris",
+    "en": "Iris"
+   },
+   "sinonimos": [],
+   "categoria": "olhos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "olhos",
+    "no": "Iris.l"
+   },
+   "transformacao": null,
+   "material": "iris",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 3248,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.olho.lente.d",
+   "nome": {
+    "pt-BR": "Lente",
+    "en": "Lens"
+   },
+   "sinonimos": [
+    "cristalino"
+   ],
+   "categoria": "olhos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "olhos",
+    "no": "Lens.r"
+   },
+   "transformacao": null,
+   "material": "lente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1598,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.olho.lente.e",
+   "nome": {
+    "pt-BR": "Lente",
+    "en": "Lens"
+   },
+   "sinonimos": [
+    "cristalino"
+   ],
+   "categoria": "olhos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "olhos",
+    "no": "Lens.l"
+   },
+   "transformacao": null,
+   "material": "lente",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1598,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.olho.retina.d",
+   "nome": {
+    "pt-BR": "Retina",
+    "en": "Retina"
+   },
+   "sinonimos": [],
+   "categoria": "olhos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "olhos",
+    "no": "Retina.r"
+   },
+   "transformacao": null,
+   "material": "retina",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 6304,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.olho.retina.e",
+   "nome": {
+    "pt-BR": "Retina",
+    "en": "Retina"
+   },
+   "sinonimos": [],
+   "categoria": "olhos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "olhos",
+    "no": "Retina.l"
+   },
+   "transformacao": null,
+   "material": "retina",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 6304,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.atlas",
+   "nome": {
+    "pt-BR": "Atlas (C1)",
+    "en": "Atlas (C1)"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Atlas (C1)"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2194,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.axis",
+   "nome": {
+    "pt-BR": "Áxis (C2)",
+    "en": "Axis (C2)"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Axis (C2)"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2334,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.concha-nasal-inferior.d",
+   "nome": {
+    "pt-BR": "Concha nasal inferior",
+    "en": "Inferior nasal concha bone",
+    "la": "Concha nasalis inferior"
+   },
+   "sinonimos": [
+    "corneto inferior"
+   ],
+   "categoria": "ossos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Inferior nasal concha bone.r"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "740"
+   },
+   "triangulos": 476,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.concha-nasal-inferior.e",
+   "nome": {
+    "pt-BR": "Concha nasal inferior",
+    "en": "Inferior nasal concha bone",
+    "la": "Concha nasalis inferior"
+   },
+   "sinonimos": [
+    "corneto inferior"
+   ],
+   "categoria": "ossos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Inferior nasal concha bone.l"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "740"
+   },
+   "triangulos": 476,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.esfenoide",
+   "nome": {
+    "pt-BR": "Osso esfenoide",
+    "en": "Sphenoid bone",
+    "la": "Os sphenoideum"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Sphenoid bone"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "584"
+   },
+   "triangulos": 7304,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.etmoide",
+   "nome": {
+    "pt-BR": "Osso etmoide",
+    "en": "Ethmoid bone",
+    "la": "Os ethmoideum"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Ethmoid bone"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "721"
+   },
+   "triangulos": 10130,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.frontal",
+   "nome": {
+    "pt-BR": "Osso frontal",
+    "en": "Frontal bone",
+    "la": "Os frontale"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Frontal bone"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "520"
+   },
+   "triangulos": 7776,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.hioide",
+   "nome": {
+    "pt-BR": "Osso hioide",
+    "en": "Hyoid bone"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Hyoid bone"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1324,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.lacrimal.d",
+   "nome": {
+    "pt-BR": "Osso lacrimal",
+    "en": "Lacrimal bone",
+    "la": "Os lacrimale"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Lacrimal bone.r"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "744"
+   },
+   "triangulos": 588,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.lacrimal.e",
+   "nome": {
+    "pt-BR": "Osso lacrimal",
+    "en": "Lacrimal bone",
+    "la": "Os lacrimale"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Lacrimal bone.l"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "744"
+   },
+   "triangulos": 588,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.mandibula",
+   "nome": {
+    "pt-BR": "Mandíbula",
+    "en": "Mandible",
+    "la": "Mandibula"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Mandible"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "835"
+   },
+   "triangulos": 18838,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.maxila.d",
+   "nome": {
+    "pt-BR": "Maxila",
+    "en": "Maxilla",
+    "la": "Maxilla"
+   },
+   "sinonimos": [
+    "maxilar"
+   ],
+   "categoria": "ossos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Maxilla.r"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "756"
+   },
+   "triangulos": 4798,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.maxila.e",
+   "nome": {
+    "pt-BR": "Maxila",
+    "en": "Maxilla",
+    "la": "Maxilla"
+   },
+   "sinonimos": [
+    "maxilar"
+   ],
+   "categoria": "ossos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Maxilla.l"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "756"
+   },
+   "triangulos": 4798,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.nasal.d",
+   "nome": {
+    "pt-BR": "Osso nasal",
+    "en": "Nasal bone",
+    "la": "Os nasale"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Nasal bone.r"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "748"
+   },
+   "triangulos": 292,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.nasal.e",
+   "nome": {
+    "pt-BR": "Osso nasal",
+    "en": "Nasal bone",
+    "la": "Os nasale"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Nasal bone.l"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "748"
+   },
+   "triangulos": 292,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.occipital",
+   "nome": {
+    "pt-BR": "Osso occipital",
+    "en": "Occipital bone",
+    "la": "Os occipitale"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Occipital bone"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "552"
+   },
+   "triangulos": 7473,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.palatino.d",
+   "nome": {
+    "pt-BR": "Osso palatino",
+    "en": "Palatine bone",
+    "la": "Os palatinum"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Palatine bone.r"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "798"
+   },
+   "triangulos": 1460,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.palatino.e",
+   "nome": {
+    "pt-BR": "Osso palatino",
+    "en": "Palatine bone",
+    "la": "Os palatinum"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Palatine bone.l"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "798"
+   },
+   "triangulos": 1460,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.parietal.d",
+   "nome": {
+    "pt-BR": "Osso parietal",
+    "en": "Parietal bone",
+    "la": "Os parietale"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Parietal bone.r"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "504"
+   },
+   "triangulos": 6780,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.parietal.e",
+   "nome": {
+    "pt-BR": "Osso parietal",
+    "en": "Parietal bone",
+    "la": "Os parietale"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Parietal bone.l"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "504"
+   },
+   "triangulos": 6886,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.temporal.d",
+   "nome": {
+    "pt-BR": "Osso temporal",
+    "en": "Temporal bone",
+    "la": "Os temporale"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Temporal bone.r"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "641"
+   },
+   "triangulos": 14093,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.temporal.e",
+   "nome": {
+    "pt-BR": "Osso temporal",
+    "en": "Temporal bone",
+    "la": "Os temporale"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Temporal bone.l"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "641"
+   },
+   "triangulos": 14093,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.vertebra-c3",
+   "nome": {
+    "pt-BR": "Vértebra C3",
+    "en": "Vertebra C3"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Vertebra C3"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 2440,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.vertebra-c4",
+   "nome": {
+    "pt-BR": "Vértebra C4",
+    "en": "Vertebra C4"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Vertebra C4"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {},
+   "triangulos": 1940,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.vomer",
+   "nome": {
+    "pt-BR": "Vômer",
+    "en": "Vomer",
+    "la": "Vomer"
+   },
+   "sinonimos": [],
+   "categoria": "ossos",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Vomer"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "751"
+   },
+   "triangulos": 1022,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.zigomatico.d",
+   "nome": {
+    "pt-BR": "Osso zigomático",
+    "en": "Zygomatic bone",
+    "la": "Os zygomaticum"
+   },
+   "sinonimos": [
+    "malar"
+   ],
+   "categoria": "ossos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Zygomatic bone.r"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "818"
+   },
+   "triangulos": 1328,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.osso.zigomatico.e",
+   "nome": {
+    "pt-BR": "Osso zigomático",
+    "en": "Zygomatic bone",
+    "la": "Os zygomaticum"
+   },
+   "sinonimos": [
+    "malar"
+   ],
+   "categoria": "ossos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "ossos",
+    "no": "Zygomatic bone.l"
+   },
+   "transformacao": null,
+   "material": "osso",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "818"
+   },
+   "triangulos": 1328,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.bucal.d",
+   "nome": {
+    "pt-BR": "Pele da região bucal"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:bucal:real:d"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 4450,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.bucal.e",
+   "nome": {
+    "pt-BR": "Pele da região bucal"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:bucal:real:e"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 5265,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.couro",
+   "nome": {
+    "pt-BR": "Couro cabeludo"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:couro:real:m"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 14114,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.frontal",
+   "nome": {
+    "pt-BR": "Pele da região frontal"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:frontal:real:m"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 8217,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.infraorbital.d",
+   "nome": {
+    "pt-BR": "Pele da região infraorbital"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:infraorbital:real:d"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 1356,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.infraorbital.e",
+   "nome": {
+    "pt-BR": "Pele da região infraorbital"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:infraorbital:real:e"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 1568,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.mentual",
+   "nome": {
+    "pt-BR": "Pele da região mentual"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:mentual:real:m"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 2891,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.nasal",
+   "nome": {
+    "pt-BR": "Pele da região nasal"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:nasal:real:m"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 21149,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.ombros",
+   "nome": {
+    "pt-BR": "Pele dos ombros"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:ombros:real:m"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 14651,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.oral",
+   "nome": {
+    "pt-BR": "Pele da região oral e lábios"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:oral:real:m"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 29201,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.orbital.d",
+   "nome": {
+    "pt-BR": "Pele da região orbital e pálpebras"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:orbital:real:d"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 28539,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.orbital.e",
+   "nome": {
+    "pt-BR": "Pele da região orbital e pálpebras"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:orbital:real:e"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 28697,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.orelha.d",
+   "nome": {
+    "pt-BR": "Pele da orelha"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:orelha:real:d"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 20681,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.orelha.e",
+   "nome": {
+    "pt-BR": "Pele da orelha"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:orelha:real:e"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 30042,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.parotideomasseterica.d",
+   "nome": {
+    "pt-BR": "Pele da região parotideomassetérica"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:parotideomasseterica:real:d"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 1428,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.parotideomasseterica.e",
+   "nome": {
+    "pt-BR": "Pele da região parotideomassetérica"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:parotideomasseterica:real:e"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 2892,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.pescoco",
+   "nome": {
+    "pt-BR": "Pele do pescoço"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "mediano",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:pescoco:real:m"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 26485,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.temporal.d",
+   "nome": {
+    "pt-BR": "Pele da região temporal"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:temporal:real:d"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 19722,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.temporal.e",
+   "nome": {
+    "pt-BR": "Pele da região temporal"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:temporal:real:e"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 10839,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.zigomatica.d",
+   "nome": {
+    "pt-BR": "Pele da região zigomática"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:zigomatica:real:d"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 901,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pele.zigomatica.e",
+   "nome": {
+    "pt-BR": "Pele da região zigomática"
+   },
+   "sinonimos": [
+    "pele"
+   ],
+   "categoria": "pele",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "pele",
+    "no": "pele:zigomatica:real:e"
+   },
+   "transformacao": null,
+   "material": "pele-real",
+   "origem": "infinite",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "triangulos": 916,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pelos.cilios.d",
+   "nome": {
+    "pt-BR": "Cílios"
+   },
+   "sinonimos": [
+    "pelos"
+   ],
+   "categoria": "pelos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "pelos",
+    "no": "pelos:cilios:d"
+   },
+   "transformacao": null,
+   "material": "cilio",
+   "origem": "procedural",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pelos.cilios.e",
+   "nome": {
+    "pt-BR": "Cílios"
+   },
+   "sinonimos": [
+    "pelos"
+   ],
+   "categoria": "pelos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "pelos",
+    "no": "pelos:cilios:e"
+   },
+   "transformacao": null,
+   "material": "cilio",
+   "origem": "procedural",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pelos.sobrancelha.d",
+   "nome": {
+    "pt-BR": "Sobrancelha"
+   },
+   "sinonimos": [
+    "pelos"
+   ],
+   "categoria": "pelos",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "pelos",
+    "no": "pelos:sobrancelha:d"
+   },
+   "transformacao": null,
+   "material": "pelo",
+   "origem": "procedural",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.pelos.sobrancelha.e",
+   "nome": {
+    "pt-BR": "Sobrancelha"
+   },
+   "sinonimos": [
+    "pelos"
+   ],
+   "categoria": "pelos",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "pelos",
+    "no": "pelos:sobrancelha:e"
+   },
+   "transformacao": null,
+   "material": "pelo",
+   "origem": "procedural",
+   "licenca": "pele-escaneada",
+   "versao": "0.3.0",
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.veia.angular.d",
+   "nome": {
+    "pt-BR": "Veia angular",
+    "en": "Angular vein",
+    "la": "Vena angularis"
+   },
+   "sinonimos": [],
+   "categoria": "veias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "veias",
+    "no": "Angular vein.r"
+   },
+   "transformacao": null,
+   "material": "veia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4818"
+   },
+   "triangulos": 4360,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.veia.angular.e",
+   "nome": {
+    "pt-BR": "Veia angular",
+    "en": "Angular vein",
+    "la": "Vena angularis"
+   },
+   "sinonimos": [],
+   "categoria": "veias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "veias",
+    "no": "Angular vein.l"
+   },
+   "transformacao": null,
+   "material": "veia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4818"
+   },
+   "triangulos": 4360,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.veia.facial.d",
+   "nome": {
+    "pt-BR": "Veia facial",
+    "en": "Facial vein",
+    "la": "Vena facialis"
+   },
+   "sinonimos": [],
+   "categoria": "veias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "veias",
+    "no": "Facial vein.r"
+   },
+   "transformacao": null,
+   "material": "veia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4817"
+   },
+   "triangulos": 3476,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.veia.facial.e",
+   "nome": {
+    "pt-BR": "Veia facial",
+    "en": "Facial vein",
+    "la": "Vena facialis"
+   },
+   "sinonimos": [],
+   "categoria": "veias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "veias",
+    "no": "Facial vein.l"
+   },
+   "transformacao": null,
+   "material": "veia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4817"
+   },
+   "triangulos": 3476,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.veia.labiais-inferiores.d",
+   "nome": {
+    "pt-BR": "Veias labiais inferiores",
+    "en": "Inferior labial veins",
+    "la": "Venae labiales inferiores"
+   },
+   "sinonimos": [],
+   "categoria": "veias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "veias",
+    "no": "Inferior labial veins.r"
+   },
+   "transformacao": null,
+   "material": "veia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4825"
+   },
+   "triangulos": 6108,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.veia.labiais-inferiores.e",
+   "nome": {
+    "pt-BR": "Veias labiais inferiores",
+    "en": "Inferior labial veins",
+    "la": "Venae labiales inferiores"
+   },
+   "sinonimos": [],
+   "categoria": "veias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "veias",
+    "no": "Inferior labial veins.l"
+   },
+   "transformacao": null,
+   "material": "veia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4825"
+   },
+   "triangulos": 6108,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.veia.labial-superior.d",
+   "nome": {
+    "pt-BR": "Veia labial superior",
+    "en": "Superior labial vein",
+    "la": "Vena labialis superior"
+   },
+   "sinonimos": [],
+   "categoria": "veias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "veias",
+    "no": "Superior labial vein.r"
+   },
+   "transformacao": null,
+   "material": "veia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4824"
+   },
+   "triangulos": 1172,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.veia.labial-superior.e",
+   "nome": {
+    "pt-BR": "Veia labial superior",
+    "en": "Superior labial vein",
+    "la": "Vena labialis superior"
+   },
+   "sinonimos": [],
+   "categoria": "veias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "veias",
+    "no": "Superior labial vein.l"
+   },
+   "transformacao": null,
+   "material": "veia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4824"
+   },
+   "triangulos": 1172,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.veia.retromandibular.d",
+   "nome": {
+    "pt-BR": "Veia retromandibular",
+    "en": "Retromandibular vein",
+    "la": "Vena retromandibularis"
+   },
+   "sinonimos": [],
+   "categoria": "veias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "veias",
+    "no": "Retromandibular vein.r"
+   },
+   "transformacao": null,
+   "material": "veia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4831"
+   },
+   "triangulos": 596,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.veia.retromandibular.e",
+   "nome": {
+    "pt-BR": "Veia retromandibular",
+    "en": "Retromandibular vein",
+    "la": "Vena retromandibularis"
+   },
+   "sinonimos": [],
+   "categoria": "veias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "veias",
+    "no": "Retromandibular vein.l"
+   },
+   "transformacao": null,
+   "material": "veia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4831"
+   },
+   "triangulos": 596,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.veia.temporais-superficiais.d",
+   "nome": {
+    "pt-BR": "Veias temporais superficiais",
+    "en": "Superficial temporal veins",
+    "la": "Venae temporales superficiales"
+   },
+   "sinonimos": [],
+   "categoria": "veias",
+   "lateralidade": "direito",
+   "malha": {
+    "pacote": "veias",
+    "no": "Superficial temporal veins.r"
+   },
+   "transformacao": null,
+   "material": "veia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4832"
+   },
+   "triangulos": 3496,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  },
+  {
+   "id": "face.veia.temporais-superficiais.e",
+   "nome": {
+    "pt-BR": "Veias temporais superficiais",
+    "en": "Superficial temporal veins",
+    "la": "Venae temporales superficiales"
+   },
+   "sinonimos": [],
+   "categoria": "veias",
+   "lateralidade": "esquerdo",
+   "malha": {
+    "pacote": "veias",
+    "no": "Superficial temporal veins.l"
+   },
+   "transformacao": null,
+   "material": "veia",
+   "origem": "z-anatomy",
+   "licenca": "cc-by-sa-4.0-zanatomy",
+   "versao": "0.2.0",
+   "referencias": {
+    "ta2": "4832"
+   },
+   "triangulos": 3496,
+   "validacao": {
+    "geometria": "pendente",
+    "posicao": "pendente",
+    "nome": "pendente",
+    "revisor": null,
+    "data": null
+   }
+  }
+ ],
+ "superficie": {
+  "categorias": [
+   "pele"
+  ]
+ },
+ "texturas": {
+  "real-cor": {
+   "arquivo": "pele-real-cor.jpg",
+   "bytes": 2281597,
+   "sha256": "fde6b5697ee4dfee170fdd059dd48c721a8331b9b595d5b317f2295487a49d1c",
+   "licenca": "pele-escaneada",
+   "origem": "infinite"
+  },
+  "real-relevo": {
+   "arquivo": "pele-real-relevo.jpg",
+   "bytes": 2472316,
+   "sha256": "12fe079bdcb868f9ac761f729dc567c490b573924cc80e7bcfa1a1d75d7b03be",
+   "licenca": "pele-escaneada",
+   "origem": "infinite"
+  },
+  "real-rugosidade": {
+   "arquivo": "pele-real-rugosidade.jpg",
+   "bytes": 381597,
+   "sha256": "1b49ebab966ab2a8c7fd16374318fd659bafc968db9a0d5e4bd151c33b65e9f4",
+   "licenca": "pele-escaneada",
+   "origem": "procedural"
+  }
+ }
+}

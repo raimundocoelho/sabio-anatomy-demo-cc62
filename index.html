@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self' ws: data:; worker-src 'self' blob:">
+<title>Sábio Anatomy Engine · demonstração</title>
+<link rel="icon" href="data:,">
+  <script type="module" crossorigin src="/sabio-anatomy-demo-cc62/assets/index-CD_mJ-zT.js"></script>
+  <link rel="stylesheet" crossorigin href="/sabio-anatomy-demo-cc62/assets/index-CI5zh8A9.css">
+</head>
+<body>
+<div id="aviso" role="note"><strong>Prova de função.</strong> Não representa o visual do produto. Sem validação anatômica ou clínica.</div>
+<header id="topo">
+  <div id="titulo"><b id="nome-modelo">Sábio Anatomy Engine</b><span id="resumo-modelo"></span></div>
+  <div class="grupo" role="toolbar" aria-label="Cena">
+    <button id="b-desfazer" title="Desfazer (Ctrl+Z)">Desfazer</button>
+    <button id="b-refazer" title="Refazer (Ctrl+Shift+Z)">Refazer</button>
+    <button id="b-restaurar" title="Mostrar tudo, opaco (R)">Restaurar tudo</button>
+    <button id="b-ocultar-tudo" title="Ocultar todas as estruturas; o modelo continua carregado">Ocultar tudo</button>
+    <button id="b-esvaziar" title="Remover o modelo da cena e liberar a memória gráfica">Esvaziar cena</button>
+    <button id="b-recarregar" hidden>Recarregar modelo</button>
+    <button id="b-capturar" class="principal" title="Salvar imagem PNG com aviso e crédito">Capturar imagem</button>
+  </div>
+</header>
+<main>
+  <aside id="esq" aria-label="Camadas e estruturas">
+    <div class="busca"><input id="busca" type="search" placeholder="Buscar, ex.: zigomático direito" autocomplete="off" aria-label="Buscar por nome anatômico"><span id="busca-n" aria-live="polite"></span></div>
+    <div id="lista"></div>
+  </aside>
+  <section id="palco" aria-label="Modelo 3D">
+    <div id="cena"></div>
+    <div id="rotulo" hidden></div>
+    <div id="estado-carga" role="status"><div class="caixa"><p id="carga-texto">Carregando modelo…</p><progress id="carga-barra" max="1" value="0"></progress><pre id="carga-detalhe" hidden></pre><button id="carga-tentar" hidden>Tentar de novo</button></div></div>
+    <div id="vazio" hidden>Cena vazia. Nenhuma estrutura carregada.</div>
+    <div id="camadas-rapidas" role="toolbar" aria-label="Camadas" hidden></div>
+    <div id="comparar" hidden><canvas id="antes"></canvas><div id="divisor" role="slider" tabindex="0" aria-label="Posição da comparação entre antes e depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i></i></div><span class="et esq">Antes</span><span class="et dir">Depois (ilustrativo)</span></div>
+    <div id="numeros" aria-hidden="true"></div>
+    <div id="vistas" role="toolbar" aria-label="Vistas"></div>
+    <div id="refino" aria-hidden="true"><i></i></div>
+  </section>
+  <aside id="dir" aria-label="Estrutura selecionada e ajustes">
+    <div class="abas-dir" role="tablist" id="abas-dir" hidden><button role="tab" data-painel="explorar" aria-selected="true">Explorar</button><button role="tab" data-painel="planejar" aria-selected="false">Planejar</button></div>
+    <section id="ficha"></section>
+    <section id="planejar" hidden></section>
+    <details id="ajustes"><summary>Renderização</summary><div id="ajustes-corpo"></div></details>
+    <details id="cenas"><summary>Estado da cena</summary><div class="grupo"><button id="b-salvar">Salvar em JSON</button><label class="botao">Abrir JSON<input id="f-abrir" type="file" accept="application/json" hidden></label></div><p id="cena-msg" aria-live="polite"></p></details>
+    <details id="medidas"><summary>Desempenho</summary><pre id="medidas-texto"></pre><div class="grupo"><button id="b-medir">Medir agora</button><button id="b-copiar" hidden>Copiar resultado</button></div></details>
+    <details id="sobre"><summary>Modelo, licença e o que falta</summary><div id="sobre-corpo"></div></details>
+  </aside>
+</main>
+<nav id="abas" aria-label="Painéis"><button data-aba="esq">Estruturas</button><button data-aba="dir">Detalhes</button></nav>
+</body>
+</html>
